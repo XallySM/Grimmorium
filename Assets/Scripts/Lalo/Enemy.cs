@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] float dashSpeed;
     [SerializeField] float dashTime;
 
+    int damageCount = 0;
+
     CharacterController EnemyCont;
 
 
@@ -60,6 +62,14 @@ public class Enemy : MonoBehaviour
         if ( other.CompareTag("Player"))
         {
             StartCoroutine(DashAttack());
+
+            
+        }
+
+        if (other.CompareTag("PlayerDamage"))
+        {
+            damageCount++;
+            Debug.Log("Player receives damage! x " + damageCount);
         }
     }
 
@@ -71,6 +81,7 @@ public class Enemy : MonoBehaviour
         {
             EnemyCont.Move(transform.forward * dashSpeed * Time.deltaTime);
 
+           
             
 
             yield return null;
