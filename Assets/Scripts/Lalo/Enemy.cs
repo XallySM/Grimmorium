@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform agentTarget;
 
     [SerializeField] float PathCalculateRefreshRate = .25f;
-    [SerializeField] float AttackDistance = 4.5f;
+    //[SerializeField] float AttackDistance = 4.5f;
     [SerializeField] float dashSpeed;
     [SerializeField] float dashTime;
 
