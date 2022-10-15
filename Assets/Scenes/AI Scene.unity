@@ -1139,6 +1139,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1893508286}
+    - target: {fileID: 7628781079557589285, guid: 097c0fb141da78441890514c30fe69dc, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628781079557589285, guid: 097c0fb141da78441890514c30fe69dc, type: 3}
+      propertyPath: followsPlayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7628781079557589286, guid: 097c0fb141da78441890514c30fe69dc, type: 3}
       propertyPath: m_Name
       value: EyeEnemy

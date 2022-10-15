@@ -8,7 +8,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float speed = 24f;
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float MinDistanceToEye = 10f;
-    [SerializeField] private Transform fireOrigin;
+    public Transform fireOrigin;
 
     private void Awake()
     {
@@ -33,8 +33,14 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Environment") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Environment"))
         {
+            gameObject.SetActive(false);
+        }
+
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Damage to player!");
             gameObject.SetActive(false);
         }
     }
