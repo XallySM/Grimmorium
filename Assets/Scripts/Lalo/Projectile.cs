@@ -9,15 +9,23 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private float MinDistanceToEye = 10f;
     public Transform fireOrigin;
+    public Vector3 fireDirection = new Vector3();
+
 
     private void Awake()
     {
 
         rb = GetComponent<Rigidbody>();
     }
+
+    private void Start()
+    {
+        
+    }
     private void FixedUpdate()
     {
-        rb.velocity = fireOrigin.forward * speed;
+        //rb.velocity = fireOrigin.forward * speed;
+        rb.velocity = fireDirection * speed;
         CalculateDistanceToEye();
     }
 

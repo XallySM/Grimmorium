@@ -6,7 +6,8 @@ public class EyeEnemy : MonoBehaviour
 {
     public bool followsPlayer = false;
     public bool targetOnRange = false;
-    public float minDistanceFromTarget = 5f; 
+    public float minDistanceFromTarget = 5f;
+    public float checkDistanceRefreshRate = 1f;
    
     public Transform ShootPivot;
     [SerializeField] float fireRate = 1f;
@@ -16,12 +17,14 @@ public class EyeEnemy : MonoBehaviour
     private void Start()
     {
         
+        StartCoroutine(CheckDistance());
+
     }
     void Update()
     {
-        StartCoroutine(Shoot());
+        
         FollowPlayer();
-        CalculateDistanceFromTarget();
+        
     }
 
 
@@ -30,6 +33,7 @@ public class EyeEnemy : MonoBehaviour
         if (followsPlayer)
         {
             transform.LookAt(target);
+
         }
     }
 
@@ -39,6 +43,7 @@ public class EyeEnemy : MonoBehaviour
         if(distanceFromTarget <= minDistanceFromTarget)
         {
             targetOnRange = true;
+            StartCoroutine(Shoot());
         }
 
         else
@@ -49,23 +54,33 @@ public class EyeEnemy : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        while (targetOnRange == true)
-        {
+        
+        
             GameObject bullet = ObjectPool.instance.GetPooledObject();
 
             if (bullet != null)
             {
                 Projectile projectile = bullet.GetComponent<Projectile>();
                 projectile.fireOrigin = ShootPivot;
+                projectile.fireDirection = projectile.fireOrigin.forward;
                 bullet.transform.position = ShootPivot.position;
                 bullet.SetActive(true);
                 
             }
 
             yield return new WaitForSeconds(fireRate);
-        }
+        
         
     }
 
+    IEnumerator CheckDistance()
+    {
+        while(target != null)
+        {
+            CalculateDistanceFromTarget();
+            yield return new WaitForSeconds(checkDistanceRefreshRate);
+        }
+        
+    }
     
 }
