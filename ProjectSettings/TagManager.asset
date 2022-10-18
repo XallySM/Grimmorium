@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerDamage
   - Environment
+  - PlayerRange
   layers:
   - Default
   - TransparentFX

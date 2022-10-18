@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followsPlayer: 1
+  targetOnRange: 0
+  minDistanceFromTarget: 5
+  checkDistanceRefreshRate: 0.25
   ShootPivot: {fileID: 7628781080289578499}
   fireRate: 1
   target: {fileID: 0}

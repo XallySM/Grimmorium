@@ -39,7 +39,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Environment"))
         {
@@ -52,4 +52,6 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    
 }
