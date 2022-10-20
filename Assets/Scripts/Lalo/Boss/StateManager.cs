@@ -5,7 +5,7 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
 
-    State currentState;
+    public State currentState;
     void Update()
     {
         RunStateMachine();
