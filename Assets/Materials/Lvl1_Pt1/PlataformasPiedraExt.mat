@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlataformasPiedraExt
-  m_Shader: {fileID: -6465566751694194690, guid: 7d968ce93555e8d4aab42c0e515fec18, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 301477378b4836f489d029c7a021e38d, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -101,6 +101,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _Blend: 0
+    - _Blend_Opacity: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -114,6 +115,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _Has_Map: 1
     - _Is_DirectX: 0
     - _Metallic: 0
     - _Normal_Contrast: 2.69
@@ -134,6 +136,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}
     - _PreviewLightVector: {r: -4.65, g: 0.23, b: -2.54, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
