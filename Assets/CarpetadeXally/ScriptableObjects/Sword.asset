@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 451c3aef7a27e43c688bece61b78b2c4, type: 3}
+  m_Script: {fileID: 11500000, guid: d268d8e8bd8a74581a356aba1e87aee0, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 0}
-  itemName: Espada
+  itemName: Sword
   modelPrefab: {fileID: 5724769391328234147, guid: 67342f3bf943c4be9a8fcde99546de7c, type: 3}
   SwordAttack: SwordAttack

@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour
     public int healthLevel = 10;
     public int maxHealth;
     public int currentHealth;
+  
 
     public bool playerIsDead;
     
@@ -60,5 +61,13 @@ public class PlayerStats : MonoBehaviour
         }
 
     }
+
+    /*public void TakeHealth(int health)
+    {
+        currentHealth = currentHealth + health;
+
+        healthBar.SetCurrentHealth(currentHealth);
+    }
+    */
 
 }

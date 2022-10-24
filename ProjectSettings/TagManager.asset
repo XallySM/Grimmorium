@@ -7,7 +7,9 @@ TagManager:
   - PlayerDamage
   - Environment
   - PlayerRange
-  - Hittable
+  - Enemy
+  - Jugador
+  - Health
   layers:
   - Default
   - TransparentFX
