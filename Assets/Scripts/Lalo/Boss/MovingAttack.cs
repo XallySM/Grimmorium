@@ -12,7 +12,12 @@ public class MovingAttack : State
     public float stateDurationTime = 25f;
     public float currentStateTime;
 
-    
+    public MeshRenderer bossRenderer;
+
+    private void Awake()
+    {
+        bossRenderer = GetComponentInParent<MeshRenderer>();
+    }
 
     private void Start()
     {
@@ -21,10 +26,27 @@ public class MovingAttack : State
     }
     public override State RunCurrentState()
     {
+        stateTimeFinished = false;
+
+        bossRenderer.material.color = Color.blue;
+        if( stateTimeFinished == false)
+        {
+            currentStateTime -= Time.deltaTime;
+        }
+        
+
+        Debug.Log(currentStateTime);
         Debug.Log("Moving Attack");
+
+        if (currentStateTime <= 0)
+        {
+            
+            stateTimeFinished = true;
+        }
 
         if (stateTimeFinished == true)
         {
+            currentStateTime = stateDurationTime;
             return NextStateToThis;
         }
 
