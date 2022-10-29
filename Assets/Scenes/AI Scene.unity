@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1166478501}
+    - target: {fileID: 7628781079557589285, guid: 097c0fb141da78441890514c30fe69dc, type: 3}
+      propertyPath: checkDistanceRefreshRate
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7628781079557589286, guid: 097c0fb141da78441890514c30fe69dc, type: 3}
       propertyPath: m_Name
       value: EyeEnemy
