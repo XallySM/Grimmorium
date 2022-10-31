@@ -14,6 +14,8 @@ public class EyeEnemy : MonoBehaviour
 
     public Transform target;
 
+    private float fireTimer = 0.0f;
+
     private void Start()
     {
         
@@ -24,7 +26,10 @@ public class EyeEnemy : MonoBehaviour
     {
         
         FollowPlayer();
-        
+        if(fireTimer < fireRate + 1.0f)
+        {
+            fireTimer += Time.deltaTime;
+        }
     }
 
 
@@ -43,7 +48,13 @@ public class EyeEnemy : MonoBehaviour
         if(distanceFromTarget <= minDistanceFromTarget)
         {
             targetOnRange = true;
-            StartCoroutine(Shoot());
+
+            if(fireTimer > fireRate)
+            {
+                StartCoroutine(Shoot());
+                fireTimer = 0.0f;
+            }
+            
         }
 
         else
@@ -65,12 +76,14 @@ public class EyeEnemy : MonoBehaviour
                 projectile.fireDirection = projectile.fireOrigin.forward;
                 bullet.transform.position = ShootPivot.position;
                 bullet.SetActive(true);
+
                 
             }
 
-            yield return new WaitForSeconds(fireRate);
-        
-        
+        //yield return new WaitForSeconds(fireRate);
+        yield return null;
+
+
     }
 
     IEnumerator CheckDistance()
