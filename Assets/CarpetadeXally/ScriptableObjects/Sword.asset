@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d268d8e8bd8a74581a356aba1e87aee0, type: 3}
   m_Name: Sword
   m_EditorClassIdentifier: 
-  itemName: Sword
+  itemName: Sword-Shield
   modelPrefab: {fileID: 5724769391328234147, guid: 67342f3bf943c4be9a8fcde99546de7c, type: 3}
+  modelPrefabShield: {fileID: 7617813385579806394, guid: 0ed6e82fb82134fff989fd011379d8a6, type: 3}
   SwordAttack: SwordAttack
+  Shield: Shield

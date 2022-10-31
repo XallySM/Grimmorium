@@ -6,8 +6,12 @@ using UnityEngine;
 public class WeaponItem : Item
 {
     public GameObject modelPrefab;
-    //public bool isUnarmed;
+    public GameObject modelPrefabShield;
+    
 
     [Header("Sword Atack")]
     public string SwordAttack;
+
+    [Header("Shield")]
+    public string Shield;
 }

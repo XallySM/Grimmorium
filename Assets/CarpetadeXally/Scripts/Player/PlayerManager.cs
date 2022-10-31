@@ -10,11 +10,11 @@ public class PlayerManager : MonoBehaviour
     InputManager inputManager; //Llamar a input manager
     PlayerLocomotion playerLocomotion; //Llamar a player locomotion
     PlayerStats playerStats;
+   
     
-
     public bool isUsingRootMotion;
-
-    public bool isInvulnerable;
+    public bool isInvulnerablePlayer;
+    //public bool isBlocking;
 
     private void Awake()
     {
@@ -29,7 +29,8 @@ public class PlayerManager : MonoBehaviour
         if(playerStats.playerIsDead == false)
         { 
         inputManager.HandleAllInputs();
-        animator.GetBool("isInvulnerable");
+        //animator.SetBool("isBlocking", isBlocking);
+
         }
         else
         {
@@ -39,15 +40,19 @@ public class PlayerManager : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
+     {
         if (playerStats.playerIsDead == false)
         {
             playerLocomotion.HandleAllMovement();
             isInteracting = animator.GetBool("isInteracting");
             playerLocomotion.isJumping = animator.GetBool("isJumping");
             animator.SetBool("isGrounded", playerLocomotion.isGrounded);
-            
-        }else
+            animator.GetBool("isInvulnerable"); //Puede ir en Update?
+            //animator.SetBool("isBlocking", isBlocking);
+
+
+        }
+        else
         {
 
         }
@@ -64,12 +69,15 @@ public class PlayerManager : MonoBehaviour
 
     public void EnableIsInvulnerable()
     {
+        isInvulnerablePlayer = true; 
         animator.SetBool("isInvulnerable", true);
     }
 
     public void DisableIsInvulnerable()
     {
+        isInvulnerablePlayer = false;
         animator.SetBool("isInvulnerable", false);
     }
+    
 
 }

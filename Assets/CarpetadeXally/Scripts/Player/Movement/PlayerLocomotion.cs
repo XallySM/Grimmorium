@@ -235,12 +235,11 @@ public class PlayerLocomotion : MonoBehaviour
     public void HandleDodge()
     {
         //Para no poder rodar si estás en el aire
-
         if (playerManager.isInteracting)
             return;
         animatorManager.PlayTargetAnimation("Dodge", true, true);
 
-        //Invulnerabilidad a los golpes durante la animación de dodge
+        //Invulnerabilidad a los golpes durante la animación de dodge    
 
     }
 }

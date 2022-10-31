@@ -18,9 +18,12 @@ public class PlayerStats : MonoBehaviour
 
     public Rigidbody playerRB;
 
+    public PlayerManager playerManager;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
+        playerManager = GetComponent<PlayerManager>();
     }
 
     void Start()
@@ -40,16 +43,23 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        currentHealth = currentHealth - damage;
+        if (playerIsDead)
+            return;
 
-        healthBar.SetCurrentHealth(currentHealth);
+        if (playerManager.isInvulnerablePlayer == false)
+        {
+            currentHealth = currentHealth - damage;
 
-        animatorManager.PlayTargetAnimation("Damage",true);
+            healthBar.SetCurrentHealth(currentHealth);
+
+            animatorManager.PlayTargetAnimation("Damage", true);
+         
+        }
 
         if (currentHealth <= 0)
         {
-            
-            currentHealth = 0;
+
+           currentHealth = 0;
 
             animatorManager.PlayTargetAnimation("Dead", true);
 
@@ -59,6 +69,7 @@ public class PlayerStats : MonoBehaviour
             playerIsDead = true;
             //Aquí lo que pasa cuando muere el jugador
         }
+
 
     }
 

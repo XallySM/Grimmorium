@@ -25,6 +25,8 @@ using UnityEngine.InputSystem;
 
         PlayerStats playerStats;
 
+        WeaponHolderSlot weaponHolderSlot;
+
         //Jump
         public bool jump_Input;
 
@@ -33,7 +35,14 @@ using UnityEngine.InputSystem;
 
         //Sword Atack
         public bool swordAttack_input;
-        //public bool heavyAttack_input;
+         //public bool heavyAttack_input;
+
+        //Use shield
+        //public bool block_input;
+        private bool isBlocking;
+        
+
+        
 
         private void Awake()
         {
@@ -42,12 +51,18 @@ using UnityEngine.InputSystem;
             playerAttacker = GetComponent<PlayerAttacker>();   //Acceder al player attacker
             playerInventory = GetComponentInParent<PlayerInventory>(); //Acceder al player inventory
             playerStats = GetComponent<PlayerStats>();
+            
+        }
+
+        private void Update()
+        {
+            //isBlocking = playerControls.PlayerActions.Block.ReadValue<float>() > 0;
         }
 
 
-        //Función para habilitar controles 
+    //Función para habilitar controles 
 
-        private void OnEnable()
+    private void OnEnable()
         {
        
             if (playerControls == null)     //Si no se está haciendo nada
@@ -63,7 +78,13 @@ using UnityEngine.InputSystem;
                 playerControls.PlayerActions.Dodge.performed += i => dodge_Input = true;
 
                 playerControls.PlayerActions.SwordAttack.performed += i => swordAttack_input = true;
-            }
+
+                
+
+                //playerControls.PlayerActions.Block.performed += i => block_input  = true;
+
+                //playerControls.PlayerActions.Block.canceled += i => block_input = false;
+        }
 
             playerControls.Enable();
         }
@@ -83,7 +104,7 @@ using UnityEngine.InputSystem;
             HandleMovementInput();
             HandleJumpingInput();
             HandleDodgeInput();
-            HandleSwordAttackInput();
+            //HandleSwordAttackInput();
         }else
         {
             OnDisable();
@@ -121,25 +142,35 @@ using UnityEngine.InputSystem;
                 dodge_Input = false;
                 playerLocomotion.HandleDodge();
             }
+
         }
 
-        private void HandleSwordAttackInput()
+    /*private void HandleSwordAttackInput()
+    {
+
+        //playerControls.PlayerActions.HeavyAttack.performed += i => heavyAttack_input = true;
+
+        if (swordAttack_input)
         {
-            
-            //playerControls.PlayerActions.HeavyAttack.performed += i => heavyAttack_input = true;
-
-            if (swordAttack_input)
-            {
-                
-                playerAttacker.HandleSwordAtack(playerInventory.leftWeapon);
-            }
-
-            /*if (heavyAtack_input)
-             {
-                playerAttacker.HandleHeavyAtack(playerInventory.leftWeapon);
-             }
-            */
+            playerAttacker.isShield = false;
+            playerAttacker.isSword = true;
+            playerAttacker.HandleSwordAtack(playerInventory.leftWeapon);
         }
 
-    }
+        /*if (heavyAtack_input)
+         {
+            playerAttacker.HandleHeavyAtack(playerInventory.leftWeapon);
+         }
+
+
+        if(block_input)
+         {
+            playerAttacker.isSword = false;
+            playerAttacker.isShield = true;
+            playerAttacker.HandleSwordAtack(playerInventory.leftWeapon);
+         }
+
+   } */
+
+}
 
