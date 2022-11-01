@@ -31,6 +31,11 @@ public class LaserAttack : State
 
         IndividualStateLogic();
 
+        if (stateTimeFinished == false)
+        {
+            currentStateTime -= Time.deltaTime;
+        }
+
         Debug.Log("Laser Attack");
         Debug.Log(currentStateTime);
 
@@ -57,9 +62,6 @@ public class LaserAttack : State
     {
         bossRenderer.material.color = Color.green;
 
-        if (stateTimeFinished == false)
-        {
-            currentStateTime -= Time.deltaTime;
-        }
+        
     }
 }
