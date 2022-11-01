@@ -27,12 +27,8 @@ public class IdleAttack : State
     public override State RunCurrentState()
     {
         stateTimeFinished = false;
-        bossRenderer.material.color = Color.red;
-        if(stateTimeFinished == false)
-        {
-            currentStateTime -= Time.deltaTime;
-        }
-        
+
+        IndividualStateLogic();
 
         Debug.Log("Idle Attack");
         Debug.Log(currentStateTime);
@@ -56,6 +52,12 @@ public class IdleAttack : State
         }
     }
 
-    
-    
+    public override void IndividualStateLogic()
+    {
+        bossRenderer.material.color = Color.red;
+        if (stateTimeFinished == false)
+        {
+            currentStateTime -= Time.deltaTime;
+        }
+    }
 }
