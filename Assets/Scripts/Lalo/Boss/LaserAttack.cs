@@ -13,6 +13,13 @@ public class LaserAttack : State
     public float stateDurationTime = 4f;
     public float currentStateTime;
 
+    public MeshRenderer bossRenderer;
+
+    private void Awake()
+    {
+        bossRenderer = GetComponentInParent<MeshRenderer>();
+    }
+
     private void Start()
     {
         currentStateTime = stateDurationTime;
@@ -20,10 +27,28 @@ public class LaserAttack : State
     }
     public override State RunCurrentState()
     {
+        stateTimeFinished = false;
+
+        IndividualStateLogic();
+
+        if (stateTimeFinished == false)
+        {
+            currentStateTime -= Time.deltaTime;
+        }
 
         Debug.Log("Laser Attack");
+        Debug.Log(currentStateTime);
+
+
+        if (currentStateTime <= 0)
+        {
+            
+            stateTimeFinished = true;
+        }
+
         if (stateTimeFinished == true)
         {
+            currentStateTime = stateDurationTime;
             return NextStateToThis;
         }
 
@@ -33,5 +58,10 @@ public class LaserAttack : State
         }
     }
 
-  
+    public override void IndividualStateLogic()
+    {
+        bossRenderer.material.color = Color.green;
+
+        
+    }
 }

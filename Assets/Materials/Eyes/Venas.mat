@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Venas
+  m_Shader: {fileID: -6465566751694194690, guid: b1541b233f8fc89478c81da025988d16, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Normal_map:
+        m_Texture: {fileID: 2800000, guid: 089e46c32e8257347ae8e8b2e3749ea2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pesta_a_Img:
+        m_Texture: {fileID: 2800000, guid: 327863b6ec18cd94baa6d637a2471e75, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Pupila_Img:
+        m_Texture: {fileID: 2800000, guid: 7d2dff9cd5a1ed140929502f1908b599, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Triplanar_e490d0774a0946059abd1d5e5c375fa2_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d8ed766244210ee459debf4a072cb782, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - WinkP: 1
+    - _Blend_Opacity: 0.532
+    - _Contrast: 1.64
+    - _Has_Map: 1
+    - _Is_DirectX: 0
+    - _Normal_Contrast: 2.54
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _Triplanar_Tiling: 0.31
+    m_Colors:
+    - _Color: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 0}
+    - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}
+    - _PreviewLightVector: {r: -4.65, g: 0.23, b: -2.54, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &5355487985772376816
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5

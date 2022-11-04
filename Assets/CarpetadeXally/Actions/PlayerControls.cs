@@ -180,6 +180,24 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Block"",
+                    ""type"": ""Value"",
+                    ""id"": ""8fd86a39-52b2-4fe9-8889-8bbd4df750ff"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""BlockStart"",
+                    ""type"": ""Button"",
+                    ""id"": ""c0ee7033-56f9-445c-83c8-95f5c56a5ec0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -248,6 +266,50 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""SwordAttack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""80604a7f-980a-4c3f-bafa-7a5d780aebf8"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65c5b93c-abb5-4bda-ac36-660cf7291765"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""291ce2f1-e484-45d1-b42d-67aa662fcf16"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlockStart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""928c6548-15a9-4564-9804-4ba5386077c3"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BlockStart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -262,6 +324,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_PlayerActions_Jump = m_PlayerActions.FindAction("Jump", throwIfNotFound: true);
         m_PlayerActions_Dodge = m_PlayerActions.FindAction("Dodge", throwIfNotFound: true);
         m_PlayerActions_SwordAttack = m_PlayerActions.FindAction("SwordAttack", throwIfNotFound: true);
+        m_PlayerActions_Block = m_PlayerActions.FindAction("Block", throwIfNotFound: true);
+        m_PlayerActions_BlockStart = m_PlayerActions.FindAction("BlockStart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -357,6 +421,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerActions_Jump;
     private readonly InputAction m_PlayerActions_Dodge;
     private readonly InputAction m_PlayerActions_SwordAttack;
+    private readonly InputAction m_PlayerActions_Block;
+    private readonly InputAction m_PlayerActions_BlockStart;
     public struct PlayerActionsActions
     {
         private @PlayerControls m_Wrapper;
@@ -364,6 +430,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_PlayerActions_Jump;
         public InputAction @Dodge => m_Wrapper.m_PlayerActions_Dodge;
         public InputAction @SwordAttack => m_Wrapper.m_PlayerActions_SwordAttack;
+        public InputAction @Block => m_Wrapper.m_PlayerActions_Block;
+        public InputAction @BlockStart => m_Wrapper.m_PlayerActions_BlockStart;
         public InputActionMap Get() { return m_Wrapper.m_PlayerActions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -382,6 +450,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SwordAttack.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnSwordAttack;
                 @SwordAttack.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnSwordAttack;
                 @SwordAttack.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnSwordAttack;
+                @Block.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlock;
+                @Block.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlock;
+                @Block.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlock;
+                @BlockStart.started -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlockStart;
+                @BlockStart.performed -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlockStart;
+                @BlockStart.canceled -= m_Wrapper.m_PlayerActionsActionsCallbackInterface.OnBlockStart;
             }
             m_Wrapper.m_PlayerActionsActionsCallbackInterface = instance;
             if (instance != null)
@@ -395,6 +469,12 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @SwordAttack.started += instance.OnSwordAttack;
                 @SwordAttack.performed += instance.OnSwordAttack;
                 @SwordAttack.canceled += instance.OnSwordAttack;
+                @Block.started += instance.OnBlock;
+                @Block.performed += instance.OnBlock;
+                @Block.canceled += instance.OnBlock;
+                @BlockStart.started += instance.OnBlockStart;
+                @BlockStart.performed += instance.OnBlockStart;
+                @BlockStart.canceled += instance.OnBlockStart;
             }
         }
     }
@@ -408,5 +488,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnDodge(InputAction.CallbackContext context);
         void OnSwordAttack(InputAction.CallbackContext context);
+        void OnBlock(InputAction.CallbackContext context);
+        void OnBlockStart(InputAction.CallbackContext context);
     }
 }

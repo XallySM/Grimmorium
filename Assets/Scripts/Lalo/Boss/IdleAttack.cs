@@ -12,6 +12,13 @@ public class IdleAttack : State
 
     public float stateDurationTime = 10f;
     public float currentStateTime;
+
+    public MeshRenderer bossRenderer;
+
+    private void Awake()
+    {
+        bossRenderer = GetComponentInParent<MeshRenderer>();
+    }
     private void Start()
     {
         currentStateTime = stateDurationTime;
@@ -19,10 +26,28 @@ public class IdleAttack : State
     }
     public override State RunCurrentState()
     {
-        StartCoroutine(UpdateStateTime());
+        stateTimeFinished = false;
+
+        IndividualStateLogic();
+
+        if (stateTimeFinished == false)
+        {
+            currentStateTime -= Time.deltaTime;
+        }
+
         Debug.Log("Idle Attack");
+        Debug.Log(currentStateTime);
+
+        if (currentStateTime <= 0)
+        {
+            
+            stateTimeFinished = true;
+        }
+
+
         if (stateTimeFinished == true)
         {
+            currentStateTime = stateDurationTime;
             return NextStateToThis;
         }
 
@@ -32,16 +57,9 @@ public class IdleAttack : State
         }
     }
 
-    private IEnumerator UpdateStateTime()
+    public override void IndividualStateLogic()
     {
-        while (currentStateTime >= 0)
-        {
-            yield return new WaitForSeconds(1f);
-            currentStateTime--;
-            Debug.Log(currentStateTime);
-        }
-
-        yield return null;
+        bossRenderer.material.color = Color.red;
+        
     }
-    
 }
