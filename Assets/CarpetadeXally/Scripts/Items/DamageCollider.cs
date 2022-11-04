@@ -9,7 +9,7 @@ public class DamageCollider : MonoBehaviour
 
     private void Awake()
     {
-        damageCollider = GetComponent<Collider>();
+        damageCollider = GetComponentInChildren<Collider>();
         damageCollider.gameObject.SetActive(true);
         damageCollider.isTrigger = true;
         damageCollider.enabled = false;
@@ -27,7 +27,7 @@ public class DamageCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Jugador")
         {
             PlayerStats playerStats = collision.GetComponent<PlayerStats>();
             if (playerStats!= null)
@@ -38,6 +38,7 @@ public class DamageCollider : MonoBehaviour
 
         if (collision.tag == "Enemy")
         {
+            Debug.Log("enemy");
             EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
 
             if (enemyStats != null)

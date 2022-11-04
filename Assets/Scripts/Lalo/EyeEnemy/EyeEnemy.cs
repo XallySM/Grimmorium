@@ -44,6 +44,7 @@ public class EyeEnemy : MonoBehaviour
 
     void CalculateDistanceFromTarget()
     {
+       
         float distanceFromTarget = Vector3.Distance(transform.position, target.position);
         if(distanceFromTarget <= minDistanceFromTarget)
         {
