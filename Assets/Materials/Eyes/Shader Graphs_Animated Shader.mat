@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Ojo
-  m_Shader: {fileID: -6465566751694194690, guid: 301477378b4836f489d029c7a021e38d, type: 3}
+  m_Name: Shader Graphs_Animated Shader
+  m_Shader: {fileID: -6465566751694194690, guid: 0a8beaa8f94ad1944b34de9330341608, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 2
@@ -20,16 +20,28 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Displacement_Texture:
+        m_Texture: {fileID: 2800000, guid: 60daed59fd238b14aaf0ada8f191e843, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal_map:
+        m_Texture: {fileID: 2800000, guid: c021d051fa0cba84282b4a2577aa85c5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_785f69da0b5a44fd8b1084bb05c3d853_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 60daed59fd238b14aaf0ada8f191e843, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_ec439f7ffb054b2ea8989c8bac20e893_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 60daed59fd238b14aaf0ada8f191e843, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_367106423c11432a87cdae3367d5c441_Out_0:
         m_Texture: {fileID: 2800000, guid: 6201796654e5cd6489d3506ade9ae87f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Pesta_a_Img:
-        m_Texture: {fileID: 2800000, guid: 327863b6ec18cd94baa6d637a2471e75, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Pupila_Img:
-        m_Texture: {fileID: 2800000, guid: 7d2dff9cd5a1ed140929502f1908b599, type: 3}
+    - _Triplanar_4265d190eca944b3a0a3d17d8dcfc7fd_Texture_1:
+        m_Texture: {fileID: 2800000, guid: d8ed766244210ee459debf4a072cb782, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Triplanar_e490d0774a0946059abd1d5e5c375fa2_Texture_1:
@@ -50,21 +62,29 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - WinkP: 1
-    - _Blend_Opacity: 0
-    - _Contrast: 0.56
-    - _Has_Map: 0
+    - _Anim_Speed: 0.069
+    - _Blend_Opacity: 0.35
+    - _Contrast: 1.64
+    - _Displacement_Intensity: 0
+    - _Has_Map: 1
+    - _Invert_Direction: 1
     - _Is_DirectX: 0
-    - _Normal_Contrast: 1
+    - _Normal_Contrast: 2.54
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Triplanar_Tiling: 0.58
+    - _Texture_Rotation: 190
+    - _Triplanar_Tiling: 0.31
+    - _UV_Rotation: 0
+    - _UV_Tiling: 0.93
+    - _Velocity: 0.04
+    - _X_or_Y: 0
+    - _or_Both: 1
     m_Colors:
-    - _Color: {r: 1, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
     - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}
     - _PreviewLightVector: {r: -4.65, g: 0.23, b: -2.54, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5355487985772376816
+--- !u!114 &3386217642738081538
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
