@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6400834186387108080}
   - component: {fileID: 5903771419525574100}
   - component: {fileID: 4548870022827855086}
-  - component: {fileID: 9131855700719902498}
   m_Layer: 0
   m_Name: EspadaModelo
   m_TagString: Untagged
@@ -27,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3982041251924342535}
-  m_LocalRotation: {x: -0.70137924, y: -0, z: -0, w: 0.7127883}
-  m_LocalPosition: {x: 0, y: 0.2960806, z: -0.00094768405}
-  m_LocalScale: {x: 0.050975136, y: 0.007937734, z: 0.7169632}
+  m_LocalRotation: {x: -0.7013793, y: 0.000000014901159, z: -0.0000000372529, w: 0.7127883}
+  m_LocalPosition: {x: 0, y: 0.2960808, z: -0.0009475956}
+  m_LocalScale: {x: 0.050975133, y: 0.007937731, z: 0.71696305}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8285081754951085268}
@@ -93,24 +92,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3982041251924342535}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.06, y: 12.97, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9131855700719902498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3982041251924342535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 824c8d904a3064e47acc4342d85dc43c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWeaponDamage: 25
 --- !u!1 &3994299728255984899
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5391198779755630491}
+  - component: {fileID: 4824568141766825922}
   m_Layer: 0
   m_Name: Espada
   m_TagString: Untagged
@@ -166,12 +153,25 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5724769391328234147}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.732, y: 3.5599194, z: 0.00094768405}
+  m_LocalRotation: {x: -0.1391146, y: -0.11923638, z: 0.93872136, w: -0.2919454}
+  m_LocalPosition: {x: 0.007, y: 0.207, z: -0.016}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8285081754951085268}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17.763, y: -11.604, z: 212.732}
+--- !u!114 &4824568141766825922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5724769391328234147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824c8d904a3064e47acc4342d85dc43c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponDamage: 25

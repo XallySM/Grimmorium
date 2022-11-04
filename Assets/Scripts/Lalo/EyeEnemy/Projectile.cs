@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float MinDistanceToEye = 10f;
     public Transform fireOrigin;
     public Vector3 fireDirection = new Vector3();
-
+    
 
     private void Awake()
     {
@@ -31,11 +31,17 @@ public class Projectile : MonoBehaviour
 
     private void CalculateDistanceToEye()
     {
-        float distanceFromEye = Vector3.Distance(transform.position, fireOrigin.position);
-
-        if (distanceFromEye >= MinDistanceToEye)
+        if (fireOrigin != null)
         {
-            gameObject.SetActive(false);
+            float distanceFromEye = Vector3.Distance(transform.position, fireOrigin.position);
+
+            if (distanceFromEye >= MinDistanceToEye)
+            {
+                gameObject.SetActive(false);
+            }
+        } else if (fireOrigin == null)
+        {
+            return;
         }
     }
 
