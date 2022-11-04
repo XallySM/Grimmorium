@@ -19,17 +19,23 @@ public class EspadaEscudo : MonoBehaviour
 
     public bool swordAttack_Input;
 
+    public bool isFreeze;
+
     AnimatorManager animatorManager;
 
     //public bool block_Input;
 
     DamageCollider swordDamageCollider;
 
+    BlockCollider shieldBlockCollider;
+
     PlayerManager playerManager;
 
     Animator animator;
 
     Rigidbody playerRB;
+
+    PlayerStats playerStats;
 
     private bool isBlocking;
 
@@ -39,6 +45,8 @@ public class EspadaEscudo : MonoBehaviour
         playerManager = GetComponent<PlayerManager>();
         animator = GetComponent<Animator>();
         playerRB= GetComponent<Rigidbody>();
+        playerStats = GetComponent<PlayerStats>();
+        isFreeze = false;
     }
 
 
@@ -50,7 +58,7 @@ public class EspadaEscudo : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetButtonDown("GatilloDerecho"))
         {
-            Debug.Log("TeclaDown");
+            //Debug.Log("TeclaDown");
             animatorManager.PlayTargetAnimation("ShieldStart", true);
             //HandleBlock();
             //isBlocking = false;
@@ -63,17 +71,21 @@ public class EspadaEscudo : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Z) || Input.GetButton("GatilloDerecho"))
         {
-            Debug.Log("Tecla");
+            //Debug.Log("Tecla");
             animator.SetBool("ShieldActive", true);
+            OpenShieldBlockCollider();
             playerRB.constraints = RigidbodyConstraints.FreezePosition;
             playerRB.constraints = RigidbodyConstraints.FreezeRotation;
         }
 
         if (Input.GetKeyUp(KeyCode.Z) || Input.GetButtonUp("GatilloDerecho"))
         {
-            Debug.Log("TeclaUp");
+            //Debug.Log("TeclaUp");
+            CloseShieldBlockCollider();
             animator.SetBool("ShieldActive", false);
         }
+
+        CantMove();
     }
     
 
@@ -86,11 +98,33 @@ public class EspadaEscudo : MonoBehaviour
     private void OpenSwordDamageCollider()
     {
         swordDamageCollider.EnableDamageCollider();
+        //Debug.Log("open");
     }
 
     private void CloseSwordDamageCollider()
     {
         swordDamageCollider.DisableDamageCollider();
+        //Debug.Log("close");
+    }
+    #endregion
+
+
+    #region Abrir y cerrar el damage collider del escudo
+    private void LoadShieldBlockCollider()
+    {
+        shieldBlockCollider = GetComponentInChildren<BlockCollider>();
+    }
+
+    private void OpenShieldBlockCollider()
+    {
+        shieldBlockCollider.EnableBlockCollider();
+        Debug.Log("open");
+    }
+
+    private void CloseShieldBlockCollider()
+    {
+        shieldBlockCollider.DisableBlockCollider();
+        Debug.Log("close");
     }
     #endregion
 
@@ -101,18 +135,20 @@ public class EspadaEscudo : MonoBehaviour
         {
             isShield = false;
             Debug.Log("Sword");
-            LoadSwordDamageCollider();
+            
 
             if (currentModel==modelShield)
             {
                 currentModel = modelSword;
                 modelSword.SetActive(true);
+                LoadSwordDamageCollider();
                 modelShield.SetActive(false);
                 //currentModel = Instantiate(modelSword) as GameObject;
             }else
                 currentModel = modelSword;
                 modelSword.SetActive(true);
-                //currentModel = Instantiate(modelSword) as GameObject;
+                LoadSwordDamageCollider();
+               //currentModel = Instantiate(modelSword) as GameObject;
         }
 
         if (isShield == true)
@@ -124,12 +160,14 @@ public class EspadaEscudo : MonoBehaviour
             {
                 currentModel = modelShield;
                 modelShield.SetActive(true);
+                LoadShieldBlockCollider();
                 modelSword.SetActive(false);
                 //currentModel = Instantiate(modelSword) as GameObject;
             }
             else
                 currentModel = modelShield;
                 modelShield.SetActive(true);
+                LoadShieldBlockCollider();
                 //currentModel = Instantiate(modelSword) as GameObject;
         }
 
@@ -198,9 +236,8 @@ public class EspadaEscudo : MonoBehaviour
     {
         if (swordAttack_Input == true)
         {
-            playerRB.constraints = RigidbodyConstraints.FreezePosition;
-            playerRB.constraints = RigidbodyConstraints.FreezeRotation;
             animatorManager.PlayTargetAnimation("SwordAttack", true);
+            playerStats.noDamage = true;
             swordAttack_Input = false;
             isSword = true;
             isShield = false;
@@ -231,6 +268,29 @@ public class EspadaEscudo : MonoBehaviour
             isBlocking = false;
         }
         */
+    }
+
+    public void Freeze()
+    {
+        isFreeze = true;
+    }
+
+    public void UnFreeze()
+    {
+        isFreeze = false;
+    }
+
+    public void CantMove()
+    {
+        if (isFreeze == true)
+        {
+            playerRB.constraints = RigidbodyConstraints.FreezePosition;
+            playerRB.constraints = RigidbodyConstraints.FreezeRotation;
+        }
+        else
+        {
+            return;
+        }
     }
 
     /*public void HandleBlock()

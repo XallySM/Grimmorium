@@ -10,14 +10,15 @@ TagManager:
   - Enemy
   - Jugador
   - Health
+  - Projectile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Target
   - Water
   - UI
-  - 
+  - NoRender
   - 
   - 
   - 

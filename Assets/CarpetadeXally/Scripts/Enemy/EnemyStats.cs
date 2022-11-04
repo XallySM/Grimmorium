@@ -37,8 +37,6 @@ public class EnemyStats : MonoBehaviour
             //Aquí la animación de cuando se muere el enemigo
 
             Destroy(this.gameObject);
-
-
         }
 
     }
