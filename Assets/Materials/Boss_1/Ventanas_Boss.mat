@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: InteriorPlataformas
+  m_Name: Ventanas_Boss
   m_Shader: {fileID: -6465566751694194690, guid: b1541b233f8fc89478c81da025988d16, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -66,7 +66,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_map:
-        m_Texture: {fileID: 2800000, guid: 0821422b9c59d8b468c66bee1283dcc9, type: 3}
+        m_Texture: {fileID: 2800000, guid: 089e46c32e8257347ae8e8b2e3749ea2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -110,12 +110,11 @@ Material:
     - WinkP: 1
     - _AlphaClip: 0
     - _Blend: 0
-    - _Blend_Opacity: 0.319
+    - _Blend_Opacity: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Color_Mixer: 0.3
-    - _Contrast: -0.55
+    - _Contrast: -1.72
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -127,10 +126,8 @@ Material:
     - _GlossyReflections: 0
     - _Has_Map: 1
     - _Is_DirectX: 0
-    - _Max_Black: 0.88
     - _Metallic: 0
-    - _Min_White: 0.6
-    - _Normal_Contrast: 3.7
+    - _Normal_Contrast: 2.88
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -141,12 +138,12 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _Triplanar_Tiling: 1.69
+    - _Triplanar_Tiling: 0.3
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}
     - _PreviewLightVector: {r: -4.65, g: 0.23, b: -2.54, a: 0}
