@@ -119,8 +119,11 @@ public class MovingAttack : State
         bossAgent.updateRotation = true;
 
         Quaternion targetRot = Quaternion.LookRotation(playerTransform.position - bossAgent.transform.position);
+        Quaternion fromRot = bossAgent.transform.localRotation;
+        
 
-        bossAgent.transform.localRotation = targetRot;
+
+        bossAgent.transform.localRotation = Quaternion.Lerp(fromRot,targetRot,1f);
 
         LimitRotation();
 

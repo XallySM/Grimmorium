@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   rb: {fileID: 0}
-  MinDistanceToEye: 10
+  MinDistanceToEye: 50
   fireOrigin: {fileID: 0}
   fireDirection: {x: 0, y: 0, z: 0}
 --- !u!54 &8342081598623875762
