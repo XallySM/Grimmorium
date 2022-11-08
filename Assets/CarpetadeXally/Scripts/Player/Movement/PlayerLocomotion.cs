@@ -107,19 +107,19 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (!isGrounded && !isJumping)
         {
-            Debug.Log("Semueve");
+            //Debug.Log("Semueve");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
         }
         else if (isGrounded && !isJumping)
         {
-            Debug.Log("Semueve2");
+            //Debug.Log("Semueve2");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
         }
         else if (!isGrounded && isJumping)
         {
-            Debug.Log("Semueve2");
+            //Debug.Log("Semueve2");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
         }

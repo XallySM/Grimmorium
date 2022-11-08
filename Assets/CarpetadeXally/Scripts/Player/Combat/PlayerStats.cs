@@ -7,10 +7,10 @@ public class PlayerStats : MonoBehaviour
     public int healthLevel = 10;
     public int maxHealth;
     public int currentHealth;
-  
 
     public bool playerIsDead;
-    
+
+    public bool noDamage;
 
     public HealthBar healthBar;
 
@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
+        noDamage = false;
     }
 
     void Start()
@@ -70,7 +71,21 @@ public class PlayerStats : MonoBehaviour
             //Aquí lo que pasa cuando muere el jugador
         }
 
+        if (noDamage == true)
+        {
+            return;
+        }
 
+    }
+
+    public void NoDamage()
+    {
+        noDamage = true;
+    }
+
+    public void Damage()
+    {
+        noDamage = false;
     }
 
     /*public void TakeHealth(int health)
