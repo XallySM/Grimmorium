@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -95,5 +96,14 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetCurrentHealth(currentHealth);
     }
     */
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "DeadCollider")
+        {
+            SceneManager.LoadScene("LoseP1");
+        }
+    }
+
 
 }
