@@ -356,7 +356,7 @@ PrefabInstance:
     - target: {fileID: -4010264366773917572, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d45f0eec56393294b845b98efead6674, type: 2}
+      objectReference: {fileID: 2100000, guid: 7493f28868e57a848ab8a3c9df1c89ae, type: 2}
     - target: {fileID: -1092818216993870280, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -364,6 +364,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
       propertyPath: m_Name
       value: Ojo_Pies
+      objectReference: {fileID: 0}
+    - target: {fileID: 2941636079808701484, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
