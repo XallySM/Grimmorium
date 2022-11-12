@@ -1,20 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
 
-    public GameObject player;
+    CinemachineVirtualCamera vcam;
+    public Transform playercurrentTransform;
+    
 
-
-    public void Follow()
+    private void Awake()
     {
-        this.gameObject.transform.position = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+        vcam = GetComponentInChildren<CinemachineVirtualCamera>();
+        vcam.gameObject.SetActive(false);
     }
 
-    public void Update()
+    private void OnTriggerEnter(Collider collision)
     {
-        Follow();
+        if (collision.CompareTag("Jugador"))
+        {
+            vcam.gameObject.SetActive(true);
+            vcam.Follow = playercurrentTransform;
+            vcam.LookAt = playercurrentTransform;
+        }
     }
+
+    private void OnTriggerExit(Collider collision)
+    {
+
+        if (collision.CompareTag("Jugador"))
+        {
+            vcam.gameObject.SetActive(false);
+        }
+    }
+
 }

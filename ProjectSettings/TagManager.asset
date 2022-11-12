@@ -11,6 +11,7 @@ TagManager:
   - Jugador
   - Health
   - Projectile
+  - DeadCollider
   layers:
   - Default
   - TransparentFX

@@ -78,6 +78,4 @@ public class PlayerManager : MonoBehaviour
         isInvulnerablePlayer = false;
         animator.SetBool("isInvulnerable", false);
     }
-    
-
 }
