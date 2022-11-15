@@ -21,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Displacement_Texture:
-        m_Texture: {fileID: 2800000, guid: 60daed59fd238b14aaf0ada8f191e843, type: 3}
+        m_Texture: {fileID: 2800000, guid: ecb23393a0d1b424a82fff68a4c00a66, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_map:
@@ -63,7 +63,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _Anim_Speed: 0.069
-    - _Blend_Opacity: 0.35
+    - _BC_Contrast: 1
+    - _Blend_Opacity: 0.391
     - _Contrast: 1.64
     - _Displacement_Intensity: 0
     - _Has_Map: 1
@@ -73,14 +74,14 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Texture_Rotation: 190
-    - _Triplanar_Tiling: 0.31
+    - _Triplanar_Tiling: 0.26
     - _UV_Rotation: 0
-    - _UV_Tiling: 0.93
+    - _UV_Tiling: 1.02
     - _Velocity: 0.04
     - _X_or_Y: 0
     - _or_Both: 1
     m_Colors:
-    - _Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}
     - _PreviewLightVector: {r: -4.65, g: 0.23, b: -2.54, a: 0}
   m_BuildTextureStacks: []

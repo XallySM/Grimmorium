@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IntCastle
+  m_Name: PlataformasInt
   m_Shader: {fileID: -6465566751694194690, guid: 513fa03624aa69d4fb9999935cdcdc38, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - _BlackMax: 0.86
     - _BlackMax_Nrm: 0.58
-    - _Color_Contrast: -0.59
+    - _Color_Contrast: 2
     - _DirectX: 0
     - _Normal_1: 1
     - _Normal_Intensity: -1.97
@@ -74,7 +74,7 @@ Material:
     - _WhiteMin: 0
     - _WhiteMin_Nml: 0.69
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 0.7894, b: 0.532, a: 1}
     - _Light_Direction: {r: 0, g: 1, b: 0, a: 0}
     - _Vector3: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
