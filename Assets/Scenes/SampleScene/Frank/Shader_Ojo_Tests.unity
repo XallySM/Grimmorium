@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ojo_base
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6d36460e9c2ad874fa5548af330dbc80, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d36460e9c2ad874fa5548af330dbc80, type: 3}
 --- !u!1 &725133482
@@ -361,12 +365,24 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ea996c61325f754686508f47b7bb35b, type: 2}
+    - target: {fileID: -324718821809290364, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
       propertyPath: m_Name
       value: Ojo_Pies
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2941636079808701484, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
       propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947488628831940643, guid: fdf7ee239709a024087a97b0764b57a1, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
