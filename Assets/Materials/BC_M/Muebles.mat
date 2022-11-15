@@ -128,7 +128,7 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Color_Contrast: 1
+    - _Color_Contrast: 1.84
     - _Contrast: 0.74
     - _Cull: 2
     - _Cutoff: 0.5
