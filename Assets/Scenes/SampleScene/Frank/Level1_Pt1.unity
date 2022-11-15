@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
 --- !u!1 &227546095 stripped
@@ -341,6 +345,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
@@ -436,6 +444,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9443ac74181382e4a94235dc2571c08c, type: 3}
       propertyPath: m_Name
       value: Castillo_Exterior
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9443ac74181382e4a94235dc2571c08c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9443ac74181382e4a94235dc2571c08c, type: 3}
@@ -542,6 +554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 494366645eab56e4195b0dd8f04f8c64, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494366645eab56e4195b0dd8f04f8c64, type: 3}
 --- !u!1 &632446804 stripped
@@ -621,6 +637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X4
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 494366645eab56e4195b0dd8f04f8c64, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494366645eab56e4195b0dd8f04f8c64, type: 3}
 --- !u!1 &1055296203 stripped
@@ -652,7 +672,7 @@ GameObject:
   - component: {fileID: 1204324580}
   - component: {fileID: 1204324579}
   - component: {fileID: 1204324581}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,6 +834,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
@@ -1012,6 +1036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
 --- !u!1 &1711822785 stripped
@@ -1090,6 +1118,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608ec93b8415c984b92385ab0dce1267, type: 3}
@@ -1264,6 +1296,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
       propertyPath: m_Name
       value: Platform_Ext_Grass_2X1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75ad47492d998540afe92000fdb8c00, type: 3}
