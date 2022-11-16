@@ -9,9 +9,9 @@ TagManager:
   - PlayerRange
   - Enemy
   - Jugador
-  - Health
   - Projectile
   - DeadCollider
+  - Apple
   layers:
   - Default
   - TransparentFX

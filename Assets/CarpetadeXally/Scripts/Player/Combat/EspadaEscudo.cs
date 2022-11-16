@@ -98,13 +98,13 @@ public class EspadaEscudo : MonoBehaviour
     private void OpenSwordDamageCollider()
     {
         swordDamageCollider.EnableDamageCollider();
-        //Debug.Log("open");
+        Debug.Log("open");
     }
 
     private void CloseSwordDamageCollider()
     {
         swordDamageCollider.DisableDamageCollider();
-        //Debug.Log("close");
+        Debug.Log("close");
     }
     #endregion
 
@@ -118,13 +118,13 @@ public class EspadaEscudo : MonoBehaviour
     private void OpenShieldBlockCollider()
     {
         shieldBlockCollider.EnableBlockCollider();
-        Debug.Log("open");
+        //Debug.Log("open");
     }
 
     private void CloseShieldBlockCollider()
     {
         shieldBlockCollider.DisableBlockCollider();
-        Debug.Log("close");
+        //Debug.Log("close");
     }
     #endregion
 

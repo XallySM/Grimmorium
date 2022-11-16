@@ -708,7 +708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3df081ab4b43498d9535435338f6434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modelTarget: {fileID: 264209080}
 --- !u!1 &436215673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1029,7 @@ GameObject:
   - component: {fileID: 554812001}
   m_Layer: 0
   m_Name: Manzana
-  m_TagString: Health
+  m_TagString: Apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1046,7 +1045,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.69
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &554811998
 MeshRenderer:
@@ -1106,7 +1105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554811996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9300005, y: 3.587, z: 1.95}
+  m_LocalPosition: {x: 4.3, y: 1.5, z: 7.15}
   m_LocalScale: {x: 0.3614019, y: 0.3614019, z: 0.3614019}
   m_ConstrainProportionsScale: 0
   m_Children: []
