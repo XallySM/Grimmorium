@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - _BlackMax: 0.86
     - _BlackMax_Nrm: 0.58
-    - _Color_Contrast: -0.59
+    - _Color_Contrast: 1.65
     - _DirectX: 0
     - _Normal_1: 1
     - _Normal_Intensity: -1.97
