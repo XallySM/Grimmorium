@@ -1189,7 +1189,7 @@
     "m_DefaultRefNameVersion": 1,
     "m_RefNameGeneratedByDisplayName": "WinkPorcent",
     "m_DefaultReferenceName": "_WinkPorcent",
-    "m_OverrideReferenceName": "WinkP",
+    "m_OverrideReferenceName": "_WinkP",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
