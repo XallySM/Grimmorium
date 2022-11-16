@@ -9,9 +9,9 @@ TagManager:
   - PlayerRange
   - Enemy
   - Jugador
-  - Health
   - Projectile
   - DeadCollider
+  - Apple
   layers:
   - Default
   - TransparentFX
@@ -24,7 +24,7 @@ TagManager:
   - Outlined
   - Laberinto
   - Ventanas
-  - 
+  - Particles and effects
   - 
   - 
   - 
