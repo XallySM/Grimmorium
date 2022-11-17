@@ -121,14 +121,14 @@ Material:
     m_Floats:
     - WinkP: 1
     - _AlphaClip: 0
-    - _BlackMax: 2.7
-    - _BlackMax_Nrm: 0.68
+    - _BlackMax: 1
+    - _BlackMax_Nrm: 1.28
     - _Blend: 0
     - _Blend_Opacity: 0.326
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Color_Contrast: 0.56
+    - _Color_Contrast: 2.15
     - _Contrast: 0.87
     - _Cull: 2
     - _Cutoff: 0.5
@@ -145,7 +145,7 @@ Material:
     - _Metallic: 0
     - _Normal_1: 1
     - _Normal_Contrast: 1.59
-    - _Normal_Intensity: -2
+    - _Normal_Intensity: -8.6
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -157,8 +157,8 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _Triplanar_Tiling: 0.14
-    - _WhiteMin: -1.28
-    - _WhiteMin_Nml: 0.69
+    - _WhiteMin: 0
+    - _WhiteMin_Nml: 0.93
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
