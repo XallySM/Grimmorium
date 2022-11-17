@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2975274093326367684}
   - component: {fileID: 8737017035364305146}
   m_Layer: 0
-  m_Name: Laser
+  m_Name: Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ ParticleSystem:
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
-  autoRandomSeed: 1
+  autoRandomSeed: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -171,7 +171,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 2.6722665
+      scalar: 2.0162518
       minScalar: 1.5
       maxCurve:
         serializedVersion: 2
@@ -4235,7 +4235,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
   CustomDataModule:
-    enabled: 1
+    enabled: 0
     mode0: 1
     vectorComponentCount0: 4
     color0:
@@ -4862,7 +4862,7 @@ ParticleSystemRenderer:
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304020522
+  m_VertexStreams: 03000104020522
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

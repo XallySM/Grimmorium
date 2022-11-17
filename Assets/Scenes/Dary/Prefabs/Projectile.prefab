@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7539753320118788722}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42548, y: 0.42548, z: 0.42548}
+  m_LocalPosition: {x: 0, y: 0.020615, z: -0.16773}
+  m_LocalScale: {x: 0.19932118, y: 0.19932118, z: 0.19932118}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +52,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 0
   startDelay:
@@ -602,7 +602,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    randomizeRotationDirection: 0
+    randomizeRotationDirection: 1
     maxNumParticles: 500
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
@@ -663,15 +663,15 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 0
     angle: 0
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 0.5, z: 0.5}
+    m_Position: {x: 0, y: -0, z: -0}
+    m_Rotation: {x: -0, y: 0, z: 0}
+    m_Scale: {x: 0.49698675, y: 0.47487715, z: 0.49199265}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -979,7 +979,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 25
+        scalar: 10
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4846,7 +4846,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.3
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -4883,8 +4883,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.89, y: 1.23, z: 4.273088}
-  m_Center: {x: 0, y: 0, z: 2.481718}
+  m_Size: {x: 1.89, y: 1.381145, z: 2.4277472}
+  m_Center: {x: 0, y: -0.055758074, z: 0.4536687}
 --- !u!54 &8737017035364305146
 Rigidbody:
   m_ObjectHideFlags: 0
