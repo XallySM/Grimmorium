@@ -64,7 +64,7 @@ Material:
     m_Floats:
     - _Anim_Speed: 0.069
     - _BC_Contrast: 1
-    - _Blend_Opacity: 0.391
+    - _Blend_Opacity: 0.372
     - _Contrast: 1.64
     - _Displacement_Intensity: 0
     - _Has_Map: 1
