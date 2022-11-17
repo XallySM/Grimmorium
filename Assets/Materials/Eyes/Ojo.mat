@@ -59,6 +59,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Triplanar_Tiling: 0.89
+    - _WinkP: 1
     m_Colors:
     - _Color: {r: 1, g: 0, b: 0, a: 0}
     - _Normal_Color: {r: 0.0470588, g: 0.02352941, b: 1, a: 1}

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class EnemyTarget : MonoBehaviour
 {
-    public GameObject modelTarget;
-
+    //public GameObject modelTarget;
+  
     private void Awake()
     {
-        modelTarget.SetActive(false);
+        //modelTarget.SetActive(false);
     }
 
     public void ActivateTarget()
     {
-        modelTarget.SetActive(true);
+        //modelTarget.SetActive(true);
     }
 
     public void DesactivateTarget()
     {
-        modelTarget.SetActive(false);
+        //modelTarget.SetActive(false);
     }
 }

@@ -103,7 +103,17 @@ public class PlayerStats : MonoBehaviour
         {
             SceneManager.LoadScene("LoseP1");
         }
-    }
 
+        if (collision.tag == "Apple")
+        {
+            Destroy(collision.gameObject);
+
+            if (currentHealth < maxHealth)
+            {
+                currentHealth = maxHealth;
+                healthBar.SetCurrentHealth(currentHealth);
+            }
+        }
+    }
 
 }
