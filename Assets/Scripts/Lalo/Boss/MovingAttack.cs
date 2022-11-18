@@ -13,7 +13,7 @@ public class MovingAttack : State
     public float stateDurationTime = 25f;
     public float currentStateTime;
 
-    public MeshRenderer bossRenderer;
+    
 
     NavMeshAgent bossAgent;
     public Transform[] waypoints;
@@ -29,7 +29,7 @@ public class MovingAttack : State
 
     private void Awake()
     {
-        bossRenderer = GetComponentInParent<MeshRenderer>();
+        
         bossAgent = GetComponentInParent<NavMeshAgent>();
     }
 
@@ -95,7 +95,7 @@ public class MovingAttack : State
         }
 
         ShootAttack();
-        bossRenderer.material.color = Color.blue;
+        
     }
 
     void UpdateDestination()
@@ -123,7 +123,7 @@ public class MovingAttack : State
         
 
 
-        bossAgent.transform.localRotation = Quaternion.Lerp(fromRot,targetRot,1f);
+        bossAgent.transform.localRotation = Quaternion.Lerp(fromRot,targetRot,2f);
 
         LimitRotation();
 

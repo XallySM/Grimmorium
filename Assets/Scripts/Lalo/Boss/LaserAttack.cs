@@ -15,7 +15,7 @@ public class LaserAttack : State
     public float stateDurationTime = 4f;
     public float currentStateTime;
 
-    public MeshRenderer bossRenderer;
+    
     NavMeshAgent bossAgent;
     public Transform playerTransform;
     public Transform shootPivot;
@@ -30,7 +30,7 @@ public class LaserAttack : State
 
     private void Awake()
     {
-        bossRenderer = GetComponentInParent<MeshRenderer>();
+        
         bossAgent = GetComponentInParent<NavMeshAgent>();
     }
 
@@ -74,7 +74,7 @@ public class LaserAttack : State
 
     public override void IndividualStateLogic()
     {
-        bossRenderer.material.color = Color.green;
+        
         ShootAttack();
         
     }

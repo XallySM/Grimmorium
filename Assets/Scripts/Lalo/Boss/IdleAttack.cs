@@ -14,7 +14,7 @@ public class IdleAttack : State
     public float stateDurationTime = 10f;
     public float currentStateTime;
 
-    public MeshRenderer bossRenderer;
+    
     NavMeshAgent bossAgent;
     public Transform playerTransform;
 
@@ -31,7 +31,7 @@ public class IdleAttack : State
 
     private void Awake()
     {
-        bossRenderer = GetComponentInParent<MeshRenderer>();
+        
         bossAgent = GetComponentInParent<NavMeshAgent>();
     }
     private void Start()
@@ -76,7 +76,7 @@ public class IdleAttack : State
 
     public override void IndividualStateLogic()
     {
-        bossRenderer.material.color = Color.red;
+        
         ShootAttack();
         
     }
