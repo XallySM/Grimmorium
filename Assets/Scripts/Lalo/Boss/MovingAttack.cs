@@ -16,6 +16,7 @@ public class MovingAttack : State
     
 
     NavMeshAgent bossAgent;
+    public Animator bossAnim;
     public Transform[] waypoints;
     int waypointIndex;
     Vector3 waypointTarget;
@@ -31,6 +32,7 @@ public class MovingAttack : State
     {
         
         bossAgent = GetComponentInParent<NavMeshAgent>();
+        bossAnim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -50,6 +52,9 @@ public class MovingAttack : State
         //here ends the individual state logic
         if( stateTimeFinished == false)
         {
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", false);
+            bossAnim.SetBool("IsMoving", true);
             currentStateTime -= Time.deltaTime;
         }
 
@@ -61,7 +66,9 @@ public class MovingAttack : State
 
         if (currentStateTime <= 0)
         {
-            
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", true);
+            bossAnim.SetBool("IsMoving", false);
             stateTimeFinished = true;
         }
 
@@ -161,6 +168,7 @@ public class MovingAttack : State
             projectile.fireOrigin = ShootPivot;
             projectile.fireDirection = projectile.fireOrigin.forward;
             bullet.transform.position = ShootPivot.position;
+            
             bullet.SetActive(true);
 
 

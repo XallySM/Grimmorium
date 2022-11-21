@@ -21,8 +21,16 @@ public class LaserAttack : State
     public Transform shootPivot;
     public float attackRange = 50f;
     public float attackDuration = 3f;
+    public float beamOffset = 1f;
+
+
+    public Animator bossAnim;
 
     public GameObject beam;
+    public GameObject impactEffect;
+    public GameObject emmisionEffect;
+
+    public bool canShootLaser = false;
 
     
 
@@ -32,11 +40,13 @@ public class LaserAttack : State
     {
         
         bossAgent = GetComponentInParent<NavMeshAgent>();
+        bossAnim = GetComponent<Animator>();
     }
 
     private void Start()
     {
         currentStateTime = stateDurationTime;
+        emmisionEffect.SetActive(false);
         
     }
     public override State RunCurrentState()
@@ -47,6 +57,10 @@ public class LaserAttack : State
 
         if (stateTimeFinished == false)
         {
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", true);
+            bossAnim.SetBool("IsMoving", false);
+            
             currentStateTime -= Time.deltaTime;
         }
 
@@ -56,7 +70,14 @@ public class LaserAttack : State
 
         if (currentStateTime <= 0)
         {
-            
+            bossAnim.SetBool("IsIdle", true);
+            bossAnim.SetBool("IsLaser", false);
+            bossAnim.SetBool("IsMoving", false);
+            bossAnim.SetBool("IsLaserPerformed", false);
+
+            canShootLaser = false;
+            emmisionEffect.SetActive(false);
+
             stateTimeFinished = true;
         }
 
@@ -74,8 +95,12 @@ public class LaserAttack : State
 
     public override void IndividualStateLogic()
     {
+        if (canShootLaser)
+        {
+            ShootAttack();
+            emmisionEffect.SetActive(true);
+        }
         
-        ShootAttack();
         
     }
 
@@ -114,24 +139,44 @@ public class LaserAttack : State
             
 
             float distanceToHit = Vector3.Distance(shootPivot.position, hit.point);
-            
-            
 
-            beam.transform.localScale = new Vector3(1, 1, distanceToHit);
+
+            
+            beam.transform.localScale = new Vector3(.5f, .5f, distanceToHit - beamOffset);
+
+            if (beam.transform.localScale == new Vector3(.5f, .5f, distanceToHit - beamOffset))
+            {
+                impactEffect.SetActive(true);
+                impactEffect.transform.position = hit.point;
+                impactEffect.transform.LookAt(shootPivot.position);
+                
+            }
 
             
         }
         else
         {
+            
             beam.transform.localScale = new Vector3(1, 1, attackRange);
         }
 
-        if (currentStateTime <= 1f)
+        if (currentStateTime <= .25f)
         {
+            
             beam.transform.localScale = new Vector3(1, 1, 0);
+            impactEffect.SetActive(false);
+            emmisionEffect.SetActive(false);
         }
 
         //StartCoroutine(ShootLaser());
+    }
+
+
+    void ChangeToLaserPerformed()
+    {
+        canShootLaser = true;
+        bossAnim.SetBool("IsLaserPerformed", true);
+        
     }
 
     /*IEnumerator ShootLaser()

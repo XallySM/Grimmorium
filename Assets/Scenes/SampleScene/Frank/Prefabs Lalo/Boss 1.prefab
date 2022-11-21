@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8016120175286396294
+--- !u!1 &6318039253981389026
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,156 +8,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120175286396536}
-  - component: {fileID: 8016120175286396295}
-  m_Layer: 0
-  m_Name: IdleAttackState
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8016120175286396536
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175286396294}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8016120175286396295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175286396294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11c109d3862bacc4fbcce48e2009b49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextStateToThis: {fileID: 8016120175795527042}
-  PreviousStateToThis: {fileID: 8016120176702404287}
-  stateTimeFinished: 0
-  stateDurationTime: 10
-  currentStateTime: 0
-  playerTransform: {fileID: 0}
-  ShootPivots:
-  - {fileID: 8016120175477964399}
-  - {fileID: 8016120177210693037}
-  - {fileID: 8016120175646257497}
-  - {fileID: 8016120175379151120}
-  - {fileID: 8016120176532804963}
-  burst:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  bossAnim: {fileID: 0}
-  fireRate: 1
---- !u!1 &8016120175379151135
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8016120175379151120}
-  m_Layer: 0
-  m_Name: 'BossShootPivot15Right '
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8016120175379151120
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175379151135}
-  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0.6300001, z: 0.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
---- !u!1 &8016120175477964398
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8016120175477964399}
-  m_Layer: 0
-  m_Name: BossShootPivotForward
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8016120175477964399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175477964398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.63, z: 0.91}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8016120175646257496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8016120175646257497}
-  m_Layer: 0
+  - component: {fileID: 6318039253981389027}
+  m_Layer: 8
   m_Name: BossShootPivot30Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120175646257497
+--- !u!4 &6318039253981389027
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175646257496}
+  m_GameObject: {fileID: 6318039253981389026}
   m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0.6300001, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 5
+  m_Father: {fileID: 6318039254919267299}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
---- !u!1 &8016120175795527041
+--- !u!1 &6318039254081531860
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,57 +39,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120175795527043}
-  - component: {fileID: 8016120175795527042}
-  m_Layer: 0
-  m_Name: MovingAttackState
+  - component: {fileID: 6318039254081531861}
+  m_Layer: 8
+  m_Name: BossShootPivotForward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120175795527043
+--- !u!4 &6318039254081531861
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175795527041}
+  m_GameObject: {fileID: 6318039254081531860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.63, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8016120176864629337}
+  m_Father: {fileID: 6318039254919267299}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8016120175795527042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120175795527041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4c3cc8bcbbf9d4abbc3440043b4015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextStateToThis: {fileID: 8016120176702404287}
-  PreviousStateToThis: {fileID: 8016120175286396295}
-  stateTimeFinished: 0
-  stateDurationTime: 25
-  currentStateTime: 0
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  playerTransform: {fileID: 0}
-  ShootPivot: {fileID: 8016120175477964399}
-  fireRate: 1
---- !u!1 &8016120176532804962
+--- !u!1 &6318039254255839397
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,30 +70,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120176532804963}
-  m_Layer: 0
-  m_Name: BossShootPivot15Left
+  - component: {fileID: 6318039254255839402}
+  m_Layer: 8
+  m_Name: 'BossShootPivot15Right '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120176532804963
+--- !u!4 &6318039254255839402
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176532804962}
-  m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
+  m_GameObject: {fileID: 6318039254255839397}
+  m_LocalRotation: {x: 0, y: 0.13052616, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0.6300001, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
---- !u!1 &8016120176702404285
+  m_Father: {fileID: 6318039254919267299}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 15, z: 0}
+--- !u!1 &6318039254740517910
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,54 +101,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120176702404286}
-  - component: {fileID: 8016120176702404287}
-  m_Layer: 0
-  m_Name: LaserAttackState
+  - component: {fileID: 6318039254740517911}
+  m_Layer: 8
+  m_Name: BossShootPivot30Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120176702404286
+--- !u!4 &6318039254740517911
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176702404285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 6318039254740517910}
+  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 0.6300001, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8016120176864629337}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8016120176702404287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176702404285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26c0879340ab9b46bd8f3ad8c3a6c46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NextStateToThis: {fileID: 8016120175286396295}
-  PreviousStateToThis: {fileID: 8016120175795527042}
-  stateTimeFinished: 0
-  stateDurationTime: 10
-  currentStateTime: 0
-  playerTransform: {fileID: 0}
-  shootPivot: {fileID: 8016120175477964399}
-  attackRange: 200
-  attackDuration: 0.05
-  bossAnim: {fileID: 0}
-  beam: {fileID: 7205639581587816651}
---- !u!1 &8016120176864629348
+  m_Father: {fileID: 6318039254919267299}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
+--- !u!1 &6318039254919267294
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,49 +132,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120176864629337}
-  - component: {fileID: 8016120176864629350}
-  - component: {fileID: 8016120176864629349}
-  - component: {fileID: 8016120176864629338}
-  m_Layer: 0
-  m_Name: Boss
+  - component: {fileID: 6318039254919267299}
+  - component: {fileID: 6318039254919267292}
+  - component: {fileID: 6318039254919267295}
+  - component: {fileID: 6318039254919267296}
+  - component: {fileID: 7695778353293595499}
+  - component: {fileID: 6297664461471540411}
+  - component: {fileID: 200999082487184117}
+  - component: {fileID: 7179081007989091829}
+  m_Layer: 8
+  m_Name: Boss 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120176864629337
+--- !u!4 &6318039254919267299
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176864629348}
+  m_GameObject: {fileID: 6318039254919267294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07603046, y: 1.0612918, z: -0.09705602}
+  m_LocalPosition: {x: -0.09740734, y: 1.02, z: 2.447175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8016120175795527043}
-  - {fileID: 8016120175286396536}
-  - {fileID: 8016120176702404286}
-  - {fileID: 8016120175477964399}
-  - {fileID: 8016120177210693037}
-  - {fileID: 8016120175646257497}
-  - {fileID: 8016120175379151120}
-  - {fileID: 8016120176532804963}
-  - {fileID: 7544729669463513713}
-  - {fileID: 1208606479966902299}
+  - {fileID: 6318039254081531861}
+  - {fileID: 6318039254740517911}
+  - {fileID: 6318039253981389027}
+  - {fileID: 6318039254255839402}
+  - {fileID: 6318039255408968921}
+  - {fileID: 5774905854319741899}
+  - {fileID: 2906230090689792417}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8016120176864629350
+--- !u!136 &6318039254919267292
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176864629348}
+  m_GameObject: {fileID: 6318039254919267294}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -359,26 +183,26 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &8016120176864629349
+--- !u!114 &6318039254919267295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176864629348}
+  m_GameObject: {fileID: 6318039254919267294}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a6b02043226cfe4d8fb44891124a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: {fileID: 8016120175286396295}
---- !u!195 &8016120176864629338
+  currentState: {fileID: 6297664461471540411}
+--- !u!195 &6318039254919267296
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120176864629348}
+  m_GameObject: {fileID: 6318039254919267294}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
@@ -394,7 +218,108 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!1 &8016120177210693036
+--- !u!95 &7695778353293595499
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318039254919267294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0f83859fd452f2a40b4fefaad66dbd31, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9122b334efdd70f48bf97a98ec28b051, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6297664461471540411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318039254919267294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c109d3862bacc4fbcce48e2009b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextStateToThis: {fileID: 7179081007989091829}
+  PreviousStateToThis: {fileID: 200999082487184117}
+  stateTimeFinished: 0
+  stateDurationTime: 10
+  currentStateTime: 0
+  playerTransform: {fileID: 0}
+  ShootPivots:
+  - {fileID: 6318039254081531861}
+  - {fileID: 6318039254740517911}
+  - {fileID: 6318039253981389027}
+  - {fileID: 6318039254255839402}
+  - {fileID: 6318039255408968921}
+  burst:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bossAnim: {fileID: 0}
+  fireRate: 1
+--- !u!114 &200999082487184117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318039254919267294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c0879340ab9b46bd8f3ad8c3a6c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextStateToThis: {fileID: 6297664461471540411}
+  PreviousStateToThis: {fileID: 7179081007989091829}
+  stateTimeFinished: 0
+  stateDurationTime: 10
+  currentStateTime: 0
+  playerTransform: {fileID: 0}
+  shootPivot: {fileID: 6318039254081531861}
+  attackRange: 200
+  attackDuration: 0.05
+  bossAnim: {fileID: 0}
+  beam: {fileID: 6588562757157458289}
+--- !u!114 &7179081007989091829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6318039254919267294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4c3cc8bcbbf9d4abbc3440043b4015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextStateToThis: {fileID: 200999082487184117}
+  PreviousStateToThis: {fileID: 6297664461471540411}
+  stateTimeFinished: 0
+  stateDurationTime: 25
+  currentStateTime: 0
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  playerTransform: {fileID: 0}
+  ShootPivot: {fileID: 6318039254081531861}
+  fireRate: 1
+--- !u!1 &6318039255408968920
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,35 +327,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8016120177210693037}
-  m_Layer: 0
-  m_Name: BossShootPivot30Right
+  - component: {fileID: 6318039255408968921}
+  m_Layer: 8
+  m_Name: BossShootPivot15Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8016120177210693037
+--- !u!4 &6318039255408968921
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8016120177210693036}
-  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_GameObject: {fileID: 6318039255408968920}
+  m_LocalRotation: {x: 0, y: -0.13052624, z: 0, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0.6300001, z: 0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8016120176864629337}
+  m_Father: {fileID: 6318039254919267299}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
---- !u!1001 &2150348173588724616
+  m_LocalEulerAnglesHint: {x: 0, y: -15, z: 0}
+--- !u!1001 &2686194504370629170
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8016120176864629337}
+    m_TransformParent: {fileID: 6318039254919267299}
     m_Modifications:
     - target: {fileID: 457563797217065257, guid: 77b09ffec165e45419ce1cda9cd68643, type: 3}
       propertyPath: m_Name
@@ -438,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 941893843962553235, guid: 77b09ffec165e45419ce1cda9cd68643, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 941893843962553235, guid: 77b09ffec165e45419ce1cda9cd68643, type: 3}
       propertyPath: m_LocalPosition.x
@@ -482,21 +407,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77b09ffec165e45419ce1cda9cd68643, type: 3}
---- !u!4 &1208606479966902299 stripped
+--- !u!4 &2906230090689792417 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 941893843962553235, guid: 77b09ffec165e45419ce1cda9cd68643, type: 3}
-  m_PrefabInstance: {fileID: 2150348173588724616}
+  m_PrefabInstance: {fileID: 2686194504370629170}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8016120176749870490
+--- !u!1001 &6318039255091260448
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8016120176864629337}
+    m_TransformParent: {fileID: 6318039254919267299}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
       propertyPath: m_LocalScale.z
@@ -548,17 +473,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
---- !u!1 &7205639581587816651 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
-  m_PrefabInstance: {fileID: 8016120176749870490}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7544729669463513713 stripped
+--- !u!4 &5774905854319741899 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
-  m_PrefabInstance: {fileID: 8016120176749870490}
+  m_PrefabInstance: {fileID: 6318039255091260448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6588562757157458289 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}
+  m_PrefabInstance: {fileID: 6318039255091260448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4075992881744280003
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6588562757157458289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: c046a6835a6d1294dbda5e9f27a12590, type: 3}

@@ -22,9 +22,11 @@ public class Projectile : MonoBehaviour
     {
         
     }
+
     private void FixedUpdate()
     {
         //rb.velocity = fireOrigin.forward * speed;
+        
         rb.velocity = fireDirection * speed;
         CalculateDistanceToEye();
     }
@@ -52,7 +54,7 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.gameObject.CompareTag("Jugador"))
         {
             Debug.Log("Damage to player!");
             gameObject.SetActive(false);

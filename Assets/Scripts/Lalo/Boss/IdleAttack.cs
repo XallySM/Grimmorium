@@ -20,6 +20,7 @@ public class IdleAttack : State
 
     public Transform[] ShootPivots;
     public GameObject[] burst;
+    public Animator bossAnim;
 
     [SerializeField] float fireRate = 1f;
     private float fireTimer = 0.0f;
@@ -33,6 +34,7 @@ public class IdleAttack : State
     {
         
         bossAgent = GetComponentInParent<NavMeshAgent>();
+        bossAnim = GetComponent<Animator>();
     }
     private void Start()
     {
@@ -49,6 +51,9 @@ public class IdleAttack : State
 
         if (stateTimeFinished == false)
         {
+            bossAnim.SetBool("IsIdle", true);
+            bossAnim.SetBool("IsLaser", false);
+            bossAnim.SetBool("IsMoving", false);
             currentStateTime -= Time.deltaTime;
         }
 
@@ -57,7 +62,9 @@ public class IdleAttack : State
 
         if (currentStateTime <= 0)
         {
-            
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", false);
+            bossAnim.SetBool("IsMoving", true);
             stateTimeFinished = true;
         }
 
@@ -127,12 +134,20 @@ public class IdleAttack : State
         {
             for (int i = 0; i < burstNumber; i++)
             {
+                
+                
+
                 burst[i] = ObjectPool.instance.GetPooledObject();
 
                 Projectile projectile = burst[i].GetComponent<Projectile>();
                     projectile.fireOrigin = ShootPivots[i];
                     projectile.fireDirection = projectile.fireOrigin.forward;
                     burst[i].transform.position = ShootPivots[i].position;
+
+                
+
+
+
                     burst[i].SetActive(true);
                 
                 
