@@ -92,7 +92,7 @@ using UnityEngine.InputSystem;
 
         //Función para deshabilitar controles
 
-        private void OnDisable()
+        public void OnDisable()
         {
             playerControls.Disable();
         }

@@ -11,6 +11,7 @@ public class PlayerLocomotion : MonoBehaviour
     Transform cameraObject;    //Para transform del player
     public Rigidbody playerRigidbody; //Para rigidbody del player
     PlayerStats playerStats;
+    public bool cantJump;
 
 
     [Header("Falling")]
@@ -43,6 +44,7 @@ public class PlayerLocomotion : MonoBehaviour
         animatorManager = GetComponent<AnimatorManager>(); //Acceder al animator manager
         playerManager = GetComponent<PlayerManager>(); //Acceder al player manager
         playerStats = GetComponent<PlayerStats>();
+        cantJump = false;
        
     }
 
@@ -216,8 +218,12 @@ public class PlayerLocomotion : MonoBehaviour
     public void HandleJumping()
     {
         //Si está grounded puede brincar
+        if (cantJump == true)
+        {
+            return;
+        }
 
-        if (isGrounded)
+        if (isGrounded && cantJump == false)
         {
             animatorManager.animator.SetBool("isJumping", true);
             animatorManager.PlayTargetAnimation("Jump", true);
