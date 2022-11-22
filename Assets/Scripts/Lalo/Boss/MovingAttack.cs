@@ -13,9 +13,10 @@ public class MovingAttack : State
     public float stateDurationTime = 25f;
     public float currentStateTime;
 
-    public MeshRenderer bossRenderer;
+    
 
     NavMeshAgent bossAgent;
+    public Animator bossAnim;
     public Transform[] waypoints;
     int waypointIndex;
     Vector3 waypointTarget;
@@ -29,8 +30,9 @@ public class MovingAttack : State
 
     private void Awake()
     {
-        bossRenderer = GetComponentInParent<MeshRenderer>();
+        
         bossAgent = GetComponentInParent<NavMeshAgent>();
+        bossAnim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -50,6 +52,9 @@ public class MovingAttack : State
         //here ends the individual state logic
         if( stateTimeFinished == false)
         {
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", false);
+            bossAnim.SetBool("IsMoving", true);
             currentStateTime -= Time.deltaTime;
         }
 
@@ -61,7 +66,9 @@ public class MovingAttack : State
 
         if (currentStateTime <= 0)
         {
-            
+            bossAnim.SetBool("IsIdle", false);
+            bossAnim.SetBool("IsLaser", true);
+            bossAnim.SetBool("IsMoving", false);
             stateTimeFinished = true;
         }
 
@@ -95,7 +102,7 @@ public class MovingAttack : State
         }
 
         ShootAttack();
-        bossRenderer.material.color = Color.blue;
+        
     }
 
     void UpdateDestination()
@@ -123,7 +130,7 @@ public class MovingAttack : State
         
 
 
-        bossAgent.transform.localRotation = Quaternion.Lerp(fromRot,targetRot,1f);
+        bossAgent.transform.localRotation = Quaternion.Lerp(fromRot,targetRot,2f);
 
         LimitRotation();
 
@@ -161,6 +168,7 @@ public class MovingAttack : State
             projectile.fireOrigin = ShootPivot;
             projectile.fireDirection = projectile.fireOrigin.forward;
             bullet.transform.position = ShootPivot.position;
+            
             bullet.SetActive(true);
 
 
