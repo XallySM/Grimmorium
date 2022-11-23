@@ -21,6 +21,9 @@ public class PlayerStats : MonoBehaviour
 
     public PlayerManager playerManager;
 
+    [Header("Audio Source")]
+    public AudioSource RecoverS;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
@@ -110,6 +113,7 @@ public class PlayerStats : MonoBehaviour
 
             if (currentHealth < maxHealth)
             {
+                RecoverS.Play();
                 currentHealth = maxHealth;
                 healthBar.SetCurrentHealth(currentHealth);
             }

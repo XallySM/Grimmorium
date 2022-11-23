@@ -39,6 +39,9 @@ public class EspadaEscudo : MonoBehaviour
 
     private bool isBlocking;
 
+    [Header("Audio Source")]
+    public AudioSource SwingS;
+
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
@@ -99,6 +102,7 @@ public class EspadaEscudo : MonoBehaviour
     {
         swordDamageCollider.EnableDamageCollider();
         Debug.Log("open");
+        SwingS.Play();
     }
 
     private void CloseSwordDamageCollider()
@@ -191,8 +195,8 @@ public class EspadaEscudo : MonoBehaviour
 
             playerControls.PlayerActions.SwordAttack.performed += i => swordAttack_Input = true;
 
-           
 
+            
 
 
             //playerControls.PlayerActions.Block.performed += i => swordAttack_Input = true;
