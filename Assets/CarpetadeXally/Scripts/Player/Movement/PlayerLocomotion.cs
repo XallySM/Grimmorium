@@ -34,7 +34,16 @@ public class PlayerLocomotion : MonoBehaviour
     [Header("Jump Speeds")]
     public float jumpHeight = 5;
     public float gravityIntensity = -15;
-   
+
+    [Header("Audio Source")]
+    public AudioSource PasosS;
+    public AudioSource SaltoS;
+    public AudioSource CaidaS;
+    public AudioSource DashS;
+    public AudioSource MuerteS;
+
+
+
 
     public void Awake()
     {
@@ -112,18 +121,42 @@ public class PlayerLocomotion : MonoBehaviour
             //Debug.Log("Semueve");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
+            
         }
         else if (isGrounded && !isJumping)
         {
             //Debug.Log("Semueve2");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
+
+            if (inputManager.moveAmount == 1f)
+            {
+                if (PasosS.isPlaying)
+                {
+
+                }
+                else
+                {
+                    PasosS.Play();
+                }
+                
+                //print(inputManager.moveAmount);
+                //InvokeRepeating("PasosRepeat", 0f, 0.6f);
+            }
+            if (inputManager.moveAmount == 0f)
+            {
+                PasosS.Stop();
+                //print(inputManager.moveAmount);
+                //InvokeRepeating("PasosRepeat", 0f, 0.6f);
+            }
+
         }
         else if (!isGrounded && isJumping)
         {
             //Debug.Log("Semueve2");
             movementVelocity = moveDirection;
             playerRigidbody.velocity = new Vector3(movementVelocity.x, playerRigidbody.velocity.y, movementVelocity.z);
+            
         }
         
     }
@@ -180,11 +213,30 @@ public class PlayerLocomotion : MonoBehaviour
             {
                 animatorManager.PlayTargetAnimation("Falling", true);
             }
-
+            
             animatorManager.animator.SetBool("isUsingRootMotion", false);
             inAirTimer = inAirTimer + Time.deltaTime;  //El tiempo en el aire crece con los frames que pasas en el aire
             playerRigidbody.AddForce(transform.forward * leapingVelocity); //Pequeño boost al saltar
             playerRigidbody.AddForce(-Vector3.up * fallingVelocity * inAirTimer); //Fuerza al caer, es más rápido conforme más tiempo caes
+            
+            //print(inAirTimer);
+
+            if (inAirTimer > 0.5f && inAirTimer < 0.6f)
+            {
+                if (MuerteS.isPlaying)
+                {
+
+                }
+                else
+                {
+                    MuerteS.Play();
+                }
+                
+            } else if (inAirTimer == 0f)
+            {
+                MuerteS.Stop();
+            }
+
         }
 
         //Solo detecta lo que esté en la máscara de capa de grounded
@@ -196,6 +248,7 @@ public class PlayerLocomotion : MonoBehaviour
 
             if (!isGrounded && playerManager.isInteracting)
             {
+                CaidaS.Play();
                 animatorManager.PlayTargetAnimation("Land", true);
             }
 
@@ -225,6 +278,8 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (isGrounded && cantJump == false)
         {
+            SaltoS.Play();
+
             animatorManager.animator.SetBool("isJumping", true);
             animatorManager.PlayTargetAnimation("Jump", true);
 
@@ -244,6 +299,7 @@ public class PlayerLocomotion : MonoBehaviour
         if (playerManager.isInteracting)
             return;
         animatorManager.PlayTargetAnimation("Dodge", true, true);
+        DashS.Play();
 
         //Invulnerabilidad a los golpes durante la animación de dodge    
 
