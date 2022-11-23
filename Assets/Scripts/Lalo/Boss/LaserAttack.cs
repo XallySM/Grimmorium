@@ -22,7 +22,7 @@ public class LaserAttack : State
     public float attackRange = 50f;
     public float attackDuration = 3f;
     public float beamOffset = 1f;
-
+    public int laserDamage = 100;
 
     public Animator bossAnim;
 
@@ -70,13 +70,16 @@ public class LaserAttack : State
 
         if (currentStateTime <= 0)
         {
+
+            emmisionEffect.SetActive(false);
+
             bossAnim.SetBool("IsIdle", true);
             bossAnim.SetBool("IsLaser", false);
             bossAnim.SetBool("IsMoving", false);
             bossAnim.SetBool("IsLaserPerformed", false);
 
             canShootLaser = false;
-            emmisionEffect.SetActive(false);
+            
 
             stateTimeFinished = true;
         }
@@ -140,8 +143,13 @@ public class LaserAttack : State
 
             float distanceToHit = Vector3.Distance(shootPivot.position, hit.point);
 
+            PlayerStats playerStats = hit.collider.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                playerStats.TakeDamage(laserDamage);
+            }
 
-            
+
             beam.transform.localScale = new Vector3(.5f, .5f, distanceToHit - beamOffset);
 
             if (beam.transform.localScale == new Vector3(.5f, .5f, distanceToHit - beamOffset))
@@ -165,7 +173,7 @@ public class LaserAttack : State
             
             beam.transform.localScale = new Vector3(1, 1, 0);
             impactEffect.SetActive(false);
-            emmisionEffect.SetActive(false);
+            //emmisionEffect.SetActive(false);
         }
 
         //StartCoroutine(ShootLaser());
