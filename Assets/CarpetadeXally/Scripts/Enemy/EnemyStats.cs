@@ -10,6 +10,12 @@ public class EnemyStats : MonoBehaviour
 
     Animator animator;
 
+    [Header("Audio Source")]
+    public AudioSource HitS;
+    public AudioSource CryS;
+
+    Animator dissolveAnim;
+
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
@@ -18,6 +24,12 @@ public class EnemyStats : MonoBehaviour
     {
         maxHealth = SetMaxHealthFromHealthLevel();
         currentHealth = maxHealth;
+
+        HitS = this.transform.Find("EnemySounds").transform.Find("HitS").GetComponent<AudioSource>();
+        CryS = this.transform.Find("EnemySounds").transform.Find("CryS").GetComponent<AudioSource>();
+
+        dissolveAnim = gameObject.GetComponent<Animator>();
+
     }
 
     private int SetMaxHealthFromHealthLevel()
@@ -31,14 +43,25 @@ public class EnemyStats : MonoBehaviour
         currentHealth = currentHealth - damage;
         //Aquí la animación si el enemigo recibe daño
 
+        HitS.Play();
+
         if (currentHealth <= 0)
         {
+            CryS.Play();
+            dissolveAnim.SetTrigger("Dissolve");
             currentHealth = 0;
-            //Aquí la animación de cuando se muere el enemigo
-
-            Destroy(this.gameObject);
+            Invoke("DelayAct", 2f);
         }
 
+    }
+
+
+    private void DelayAct()
+    {
+        
+        //Aquí la animación de cuando se muere el enemigo
+
+        Destroy(this.gameObject);
     }
 
 }

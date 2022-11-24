@@ -21,6 +21,9 @@ public class EyeEnemy : MonoBehaviour
 
     Animator blinkAnim; // = playerTransform.gameObject.GetComponent<Animator>();
 
+    public AudioSource ShootS;
+
+    public EnemyStats enemyStats;
 
     private void Start()
     {
@@ -31,7 +34,11 @@ public class EyeEnemy : MonoBehaviour
         materialEye.SetFloat("_WinkP", 1);
         */
 
+        ShootS = this.transform.Find("EnemySounds").transform.Find("ShootS").GetComponent<AudioSource>();
+
         blinkAnim = gameObject.GetComponent<Animator>();
+
+        enemyStats = gameObject.GetComponent<EnemyStats>();
 
         StartCoroutine(CheckDistance());
 
@@ -83,10 +90,10 @@ public class EyeEnemy : MonoBehaviour
     IEnumerator Shoot()
     {
 
-        
+
         GameObject bullet = ObjectPool.instance.GetPooledObject();
 
-        if (bullet != null)
+        if (bullet != null && enemyStats.currentHealth != 0)
         {
             
 
@@ -97,6 +104,7 @@ public class EyeEnemy : MonoBehaviour
             bullet.transform.position = ShootPivot.position;
             bullet.SetActive(true);
 
+            ShootS.Play();
 
             //InvokeRepeating("OpenEyeWink", 0f, WinkSpeed);
             
