@@ -14,6 +14,7 @@ public class EnemyStats : MonoBehaviour
     public AudioSource HitS;
     public AudioSource CryS;
 
+    Animator dissolveAnim;
 
     private void Awake()
     {
@@ -26,6 +27,8 @@ public class EnemyStats : MonoBehaviour
 
         HitS = this.transform.Find("EnemySounds").transform.Find("HitS").GetComponent<AudioSource>();
         CryS = this.transform.Find("EnemySounds").transform.Find("CryS").GetComponent<AudioSource>();
+
+        dissolveAnim = gameObject.GetComponent<Animator>();
 
     }
 
@@ -45,6 +48,7 @@ public class EnemyStats : MonoBehaviour
         if (currentHealth <= 0)
         {
             CryS.Play();
+            dissolveAnim.SetTrigger("Dissolve");
             currentHealth = 0;
             Invoke("DelayAct", 2f);
         }

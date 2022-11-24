@@ -23,6 +23,8 @@ public class EyeEnemy : MonoBehaviour
 
     public AudioSource ShootS;
 
+    public EnemyStats enemyStats;
+
     private void Start()
     {
         /*GameObject stchild = transform.GetChild(0).gameObject;
@@ -35,6 +37,8 @@ public class EyeEnemy : MonoBehaviour
         ShootS = this.transform.Find("EnemySounds").transform.Find("ShootS").GetComponent<AudioSource>();
 
         blinkAnim = gameObject.GetComponent<Animator>();
+
+        enemyStats = gameObject.GetComponent<EnemyStats>();
 
         StartCoroutine(CheckDistance());
 
@@ -86,10 +90,10 @@ public class EyeEnemy : MonoBehaviour
     IEnumerator Shoot()
     {
 
-        
+
         GameObject bullet = ObjectPool.instance.GetPooledObject();
 
-        if (bullet != null)
+        if (bullet != null && enemyStats.currentHealth != 0)
         {
             
 
