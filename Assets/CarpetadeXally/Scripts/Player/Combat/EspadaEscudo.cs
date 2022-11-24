@@ -41,6 +41,7 @@ public class EspadaEscudo : MonoBehaviour
 
     [Header("Audio Source")]
     public AudioSource SwingS;
+    public AudioSource SacarEscudoS;
 
     private void Awake()
     {
@@ -50,6 +51,9 @@ public class EspadaEscudo : MonoBehaviour
         playerRB= GetComponent<Rigidbody>();
         playerStats = GetComponent<PlayerStats>();
         isFreeze = false;
+
+        SwingS = this.transform.Find("AmySounds").transform.Find("Swing").GetComponent<AudioSource>();
+        SacarEscudoS = this.transform.Find("AmySounds").transform.Find("SacarEscudo").GetComponent<AudioSource>();
     }
 
 
@@ -158,7 +162,12 @@ public class EspadaEscudo : MonoBehaviour
         if (isShield == true)
         {
             isSword = false;
+
+            SacarEscudoS.Play();
+
             Debug.Log("Shield");
+
+            
 
             if (currentModel == modelSword)
             {

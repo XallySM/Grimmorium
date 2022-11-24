@@ -23,12 +23,17 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Audio Source")]
     public AudioSource RecoverS;
+    public AudioSource TakeDamageS;
 
     private void Awake()
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
         noDamage = false;
+
+        RecoverS = this.transform.Find("AmySounds").transform.Find("Recover").GetComponent<AudioSource>();
+        TakeDamageS = this.transform.Find("AmySounds").transform.Find("TakeDamage").GetComponent<AudioSource>();
+
     }
 
     void Start()
@@ -54,6 +59,8 @@ public class PlayerStats : MonoBehaviour
         if (playerManager.isInvulnerablePlayer == false)
         {
             currentHealth = currentHealth - damage;
+
+            TakeDamageS.Play();
 
             healthBar.SetCurrentHealth(currentHealth);
 
@@ -109,11 +116,13 @@ public class PlayerStats : MonoBehaviour
 
         if (collision.tag == "Apple")
         {
+            RecoverS.Play();
+
             Destroy(collision.gameObject);
 
             if (currentHealth < maxHealth)
             {
-                RecoverS.Play();
+                
                 currentHealth = maxHealth;
                 healthBar.SetCurrentHealth(currentHealth);
             }

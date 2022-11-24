@@ -54,7 +54,13 @@ public class PlayerLocomotion : MonoBehaviour
         playerManager = GetComponent<PlayerManager>(); //Acceder al player manager
         playerStats = GetComponent<PlayerStats>();
         cantJump = false;
-       
+
+        PasosS = this.transform.Find("AmySounds").transform.Find("Pasos").GetComponent<AudioSource>();
+        SaltoS = this.transform.Find("AmySounds").transform.Find("Salto").GetComponent<AudioSource>();
+        CaidaS = this.transform.Find("AmySounds").transform.Find("Caida").GetComponent<AudioSource>();
+        DashS = this.transform.Find("AmySounds").transform.Find("Dash").GetComponent<AudioSource>();
+        MuerteS = this.transform.Find("AmySounds").transform.Find("Muerte").GetComponent<AudioSource>();
+
     }
 
     public void HandleAllMovement()
