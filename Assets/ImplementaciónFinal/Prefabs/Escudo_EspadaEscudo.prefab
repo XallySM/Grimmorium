@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2877865743370574100}
   - component: {fileID: 3886161414819643757}
   - component: {fileID: 2894880109643715831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Navaja_Escudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5333630273772525763, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7321238940331452276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Escudo_EspadaEscudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3665413508041025026}
   - component: {fileID: 5928384810608967901}
   - component: {fileID: 821832751452200912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EscudoCorazon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

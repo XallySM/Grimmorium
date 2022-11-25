@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6082390650380755332}
   - component: {fileID: 6138958863957674055}
   - component: {fileID: 4839556202601789363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tornillo3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8211670835428016941}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tijeras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5138872430379110461}
   - component: {fileID: 2734231785044827475}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 5258781014201477810}
   - component: {fileID: 837290947490800107}
   - component: {fileID: 8419648401611752639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tijera1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 5140810996292030067}
   - component: {fileID: 313041947700068850}
   - component: {fileID: 8933006358009037258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tornillo4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 3572152794912410582}
   - component: {fileID: 2219520178198628701}
   - component: {fileID: 1159823765059394872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mango
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -423,7 +423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5899639915510549344}
   - component: {fileID: 4239781391473699583}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Espada_EspadaEscudo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 8306412484237992727}
   - component: {fileID: 6877978348092003855}
   - component: {fileID: 3460744452722624183}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tijera2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +520,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: e8cbc794a6e2d43529e4eabbfda46ee0, type: 3}
+  - {fileID: 2100000, guid: 427afaa0658f97a43ae8dc72468483f9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -551,7 +551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4571078446934377130}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tornillos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
