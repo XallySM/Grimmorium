@@ -12,6 +12,7 @@ public class PlayerLocomotion : MonoBehaviour
     public Rigidbody playerRigidbody; //Para rigidbody del player
     PlayerStats playerStats;
     public bool cantJump;
+    EspadaEscudo espadaEscudo;
 
 
     [Header("Falling")]
@@ -53,6 +54,7 @@ public class PlayerLocomotion : MonoBehaviour
         animatorManager = GetComponent<AnimatorManager>(); //Acceder al animator manager
         playerManager = GetComponent<PlayerManager>(); //Acceder al player manager
         playerStats = GetComponent<PlayerStats>();
+        espadaEscudo = GetComponent<EspadaEscudo>();
         cantJump = false;
 
         PasosS = this.transform.Find("AmySounds").transform.Find("Pasos").GetComponent<AudioSource>();
@@ -284,6 +286,8 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (isGrounded && cantJump == false)
         {
+            espadaEscudo.UnFreeze();
+
             SaltoS.Play();
 
             animatorManager.animator.SetBool("isJumping", true);
@@ -294,6 +298,7 @@ public class PlayerLocomotion : MonoBehaviour
             float jumpingVelocity = Mathf.Sqrt(-2 * gravityIntensity * jumpHeight);
             Vector3 playerVelocity = moveDirection;
             playerVelocity.y = jumpingVelocity;
+            //Debug.Log("VelocityJump"+jumpingVelocity);
             playerRigidbody.velocity = playerVelocity;
         }       
 

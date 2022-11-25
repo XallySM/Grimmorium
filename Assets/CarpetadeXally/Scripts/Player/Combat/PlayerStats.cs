@@ -21,6 +21,8 @@ public class PlayerStats : MonoBehaviour
 
     public PlayerManager playerManager;
 
+    PlayerLocomotion playerLocomotion;
+
     [Header("Audio Source")]
     public AudioSource RecoverS;
     public AudioSource TakeDamageS;
@@ -29,6 +31,7 @@ public class PlayerStats : MonoBehaviour
     {
         animatorManager = GetComponent<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
+        playerLocomotion = GetComponent<PlayerLocomotion>();
         noDamage = false;
 
         RecoverS = this.transform.Find("AmySounds").transform.Find("Recover").GetComponent<AudioSource>();
@@ -58,6 +61,7 @@ public class PlayerStats : MonoBehaviour
 
         if (playerManager.isInvulnerablePlayer == false)
         {
+
             currentHealth = currentHealth - damage;
 
             TakeDamageS.Play();

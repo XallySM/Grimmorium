@@ -10,6 +10,7 @@ public class WinEvent : MonoBehaviour
     EspadaEscudo espadaEscudo;
     PlayerLocomotion playerLocomotion;
     bool noPressed;
+    public int nextScene;
 
 
     private void Awake()
@@ -59,7 +60,7 @@ public class WinEvent : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene("Level1_Pt2");
+        SceneManager.LoadScene(nextScene);
     }
 
 
