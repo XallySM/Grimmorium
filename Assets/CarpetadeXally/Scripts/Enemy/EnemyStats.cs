@@ -14,7 +14,16 @@ public class EnemyStats : MonoBehaviour
     public AudioSource HitS;
     public AudioSource CryS;
 
+    public GameObject PrefabDeath;
+
+    private Transform Sphere;
+    private GameObject Jugador;
+
     Animator dissolveAnim;
+
+    private GameObject eyeinstance;
+
+    public bool es_Ojo = true;
 
     private void Awake()
     {
@@ -26,9 +35,14 @@ public class EnemyStats : MonoBehaviour
         currentHealth = maxHealth;
 
         HitS = this.transform.Find("EnemySounds").transform.Find("HitS").GetComponent<AudioSource>();
-        CryS = this.transform.Find("EnemySounds").transform.Find("CryS").GetComponent<AudioSource>();
-
+        Jugador = GameObject.FindGameObjectWithTag("Jugador");
+        CryS = Jugador.transform.Find("EnemySounds").transform.Find("CryS").GetComponent<AudioSource>();
         dissolveAnim = gameObject.GetComponent<Animator>();
+
+        if (es_Ojo)
+        {
+            Sphere = this.transform.Find("EyeGraphics").transform.Find("Sphere").GetComponent<Transform>();
+        }
 
     }
 
@@ -47,15 +61,26 @@ public class EnemyStats : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            
             CryS.Play();
-            dissolveAnim.SetTrigger("Dissolve");
+
+            Destroy(this.gameObject);
+            //dissolveAnim.SetTrigger("Dissolve");
             currentHealth = 0;
-            Invoke("DelayAct", 2f);
+            //Invoke("DelayAct", 2f);
+            
+
+            if (es_Ojo)
+            {
+                eyeinstance = Instantiate(PrefabDeath, Sphere.transform.position, Sphere.transform.rotation);
+                eyeinstance.transform.localScale = Sphere.transform.localScale;
+            }
+
         }
 
     }
 
-
+    
     private void DelayAct()
     {
         
