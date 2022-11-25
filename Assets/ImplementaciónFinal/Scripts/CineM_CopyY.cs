@@ -16,7 +16,7 @@ public class CineM_CopyY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Amy = GameObject.Find("Amy_Model");
+        Amy = GameObject.Find("Amy_Model (Final)");
     }
 
     // Update is called once per frame

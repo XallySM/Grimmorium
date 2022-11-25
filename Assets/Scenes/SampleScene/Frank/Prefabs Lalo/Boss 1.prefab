@@ -291,8 +291,13 @@ MonoBehaviour:
   shootPivot: {fileID: 6318039254081531861}
   attackRange: 200
   attackDuration: 0.05
+  beamOffset: 1
+  laserDamage: 100
   bossAnim: {fileID: 0}
   beam: {fileID: 6588562757157458289}
+  impactEffect: {fileID: 0}
+  emmisionEffect: {fileID: 0}
+  canShootLaser: 0
 --- !u!114 &7179081007989091829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +315,7 @@ MonoBehaviour:
   stateTimeFinished: 0
   stateDurationTime: 25
   currentStateTime: 0
+  bossAnim: {fileID: 0}
   waypoints:
   - {fileID: 0}
   - {fileID: 0}

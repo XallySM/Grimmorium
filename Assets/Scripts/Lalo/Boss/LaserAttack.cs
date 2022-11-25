@@ -32,7 +32,7 @@ public class LaserAttack : State
 
     public bool canShootLaser = false;
 
-    
+    PlayerStats playerStats;
 
 
 
@@ -41,6 +41,7 @@ public class LaserAttack : State
         
         bossAgent = GetComponentInParent<NavMeshAgent>();
         bossAnim = GetComponent<Animator>();
+        playerStats = GameObject.FindGameObjectWithTag("Jugador").GetComponent<PlayerStats>();
     }
 
     private void Start()
@@ -143,11 +144,19 @@ public class LaserAttack : State
 
             float distanceToHit = Vector3.Distance(shootPivot.position, hit.point);
 
-            PlayerStats playerStats = hit.collider.GetComponent<PlayerStats>();
+            //PlayerStats playerStats = hit.collider.GetComponent<PlayerStats>();
             if (playerStats != null)
             {
                 playerStats.TakeDamage(laserDamage);
+
+                if (hit.collider.gameObject.name == "BlockCollider")
+                {
+                    Debug.Log("hitttt");
+                    playerStats.TakeDamage(laserDamage);
+                }
             }
+
+            
 
 
             beam.transform.localScale = new Vector3(.5f, .5f, distanceToHit - beamOffset);

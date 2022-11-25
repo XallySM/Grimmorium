@@ -12,6 +12,7 @@ public class WinEvent : MonoBehaviour
     bool noPressed;
     public int nextScene;
 
+    public AudioSource DoorS;
 
     private void Awake()
     {
@@ -23,6 +24,9 @@ public class WinEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+        DoorS.Play();
+
         if (noPressed == false)
         {
             winPanel.SetActive(true);
