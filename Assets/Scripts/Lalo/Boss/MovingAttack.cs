@@ -30,11 +30,19 @@ public class MovingAttack : State
     [Header("Audio Source")]
     public AudioSource ShootS;
 
+    [Header("Audio Source Laser")]
+    public AudioSource RayoS;
+
+    private GameObject Jugador;
+
     private void Awake()
     {
         ShootS = this.transform.Find("EnemySounds").transform.Find("ShootS2").GetComponent<AudioSource>();
         bossAgent = GetComponentInParent<NavMeshAgent>();
         bossAnim = GetComponent<Animator>();
+
+        Jugador = GameObject.FindGameObjectWithTag("Jugador");
+        RayoS = Jugador.transform.Find("EnemySounds").transform.Find("RayoS").GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -65,10 +73,22 @@ public class MovingAttack : State
         Debug.Log(currentStateTime);
         Debug.Log("Moving Attack");
         
-        
+        if (currentStateTime < 1f)
+        {
+            if (RayoS.isPlaying)
+            {
+
+            }
+            else
+            {
+                RayoS.Play();
+            }
+        }
 
         if (currentStateTime <= 0)
         {
+
+
             bossAnim.SetBool("IsIdle", false);
             bossAnim.SetBool("IsLaser", true);
             bossAnim.SetBool("IsMoving", false);

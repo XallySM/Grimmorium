@@ -34,10 +34,7 @@ public class LaserAttack : State
 
     PlayerStats playerStats;
 
-    [Header("Audio Source")]
-    public AudioSource RayoS;
 
-    private GameObject Jugador;
 
 
     private void Awake()
@@ -47,8 +44,7 @@ public class LaserAttack : State
         bossAnim = GetComponent<Animator>();
         playerStats = GameObject.FindGameObjectWithTag("Jugador").GetComponent<PlayerStats>();
 
-        Jugador = GameObject.FindGameObjectWithTag("Jugador");
-        RayoS = Jugador.transform.Find("EnemySounds").transform.Find("RayoS").GetComponent<AudioSource>();
+
     }
 
     private void Start()
@@ -67,7 +63,7 @@ public class LaserAttack : State
 
         if (stateTimeFinished == false)
         {
-            
+
             bossAnim.SetBool("IsIdle", false);
             bossAnim.SetBool("IsLaser", true);
             bossAnim.SetBool("IsMoving", false);
@@ -76,7 +72,6 @@ public class LaserAttack : State
         }
 
         Debug.Log("Laser Attack");
-        RayoS.Play();
         Debug.Log(currentStateTime);
 
 
@@ -110,6 +105,9 @@ public class LaserAttack : State
 
     public override void IndividualStateLogic()
     {
+        
+        
+
         if (canShootLaser)
         {
             ShootAttack();
