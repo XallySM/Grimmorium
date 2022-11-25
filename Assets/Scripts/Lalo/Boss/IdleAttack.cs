@@ -27,12 +27,13 @@ public class IdleAttack : State
 
     int burstNumber = 5;
 
-    
-    
+    [Header("Audio Source")]
+    public AudioSource ShootS;
+
 
     private void Awake()
     {
-        
+        ShootS = this.transform.Find("EnemySounds").transform.Find("ShootS").GetComponent<AudioSource>();
         bossAgent = GetComponentInParent<NavMeshAgent>();
         bossAnim = GetComponent<Animator>();
     }
@@ -51,6 +52,8 @@ public class IdleAttack : State
 
         if (stateTimeFinished == false)
         {
+            
+
             bossAnim.SetBool("IsIdle", true);
             bossAnim.SetBool("IsLaser", false);
             bossAnim.SetBool("IsMoving", false);
@@ -134,8 +137,8 @@ public class IdleAttack : State
         {
             for (int i = 0; i < burstNumber; i++)
             {
-                
-                
+
+                ShootS.Play();
 
                 burst[i] = ObjectPool.instance.GetPooledObject();
 

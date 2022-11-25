@@ -34,6 +34,10 @@ public class LaserAttack : State
 
     PlayerStats playerStats;
 
+    [Header("Audio Source")]
+    public AudioSource RayoS;
+
+    private GameObject Jugador;
 
 
     private void Awake()
@@ -42,6 +46,9 @@ public class LaserAttack : State
         bossAgent = GetComponentInParent<NavMeshAgent>();
         bossAnim = GetComponent<Animator>();
         playerStats = GameObject.FindGameObjectWithTag("Jugador").GetComponent<PlayerStats>();
+
+        Jugador = GameObject.FindGameObjectWithTag("Jugador");
+        RayoS = Jugador.transform.Find("EnemySounds").transform.Find("RayoS").GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -56,8 +63,11 @@ public class LaserAttack : State
 
         IndividualStateLogic();
 
+        
+
         if (stateTimeFinished == false)
         {
+            
             bossAnim.SetBool("IsIdle", false);
             bossAnim.SetBool("IsLaser", true);
             bossAnim.SetBool("IsMoving", false);
@@ -66,6 +76,7 @@ public class LaserAttack : State
         }
 
         Debug.Log("Laser Attack");
+        RayoS.Play();
         Debug.Log(currentStateTime);
 
 
@@ -147,11 +158,17 @@ public class LaserAttack : State
             //PlayerStats playerStats = hit.collider.GetComponent<PlayerStats>();
             if (playerStats != null)
             {
-                playerStats.TakeDamage(laserDamage);
+                //playerStats.TakeDamage(laserDamage);
 
-                if (hit.collider.gameObject.name == "BlockCollider")
+                if (hit.transform.name == "BlockCollider")
                 {
-                    Debug.Log("hitttt");
+                    //Debug.Log("hitttt");
+                    playerStats.TakeDamage(laserDamage);
+                }
+
+                if (hit.transform.name == "Amy_Model (Final)")
+                {
+                    //Debug.Log("hitttt");
                     playerStats.TakeDamage(laserDamage);
                 }
             }
@@ -192,6 +209,7 @@ public class LaserAttack : State
     void ChangeToLaserPerformed()
     {
         canShootLaser = true;
+        //RayoS.Play();
         bossAnim.SetBool("IsLaserPerformed", true);
         
     }

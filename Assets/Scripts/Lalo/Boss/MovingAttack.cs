@@ -27,10 +27,12 @@ public class MovingAttack : State
     [SerializeField] float fireRate = 1f;
     private float fireTimer = 0.0f;
 
+    [Header("Audio Source")]
+    public AudioSource ShootS;
 
     private void Awake()
     {
-        
+        ShootS = this.transform.Find("EnemySounds").transform.Find("ShootS2").GetComponent<AudioSource>();
         bossAgent = GetComponentInParent<NavMeshAgent>();
         bossAnim = GetComponent<Animator>();
     }
@@ -52,6 +54,7 @@ public class MovingAttack : State
         //here ends the individual state logic
         if( stateTimeFinished == false)
         {
+            
             bossAnim.SetBool("IsIdle", false);
             bossAnim.SetBool("IsLaser", false);
             bossAnim.SetBool("IsMoving", true);
@@ -164,6 +167,9 @@ public class MovingAttack : State
 
         if (bullet != null)
         {
+
+            ShootS.Play();
+
             Projectile projectile = bullet.GetComponent<Projectile>();
             projectile.fireOrigin = ShootPivot;
             projectile.fireDirection = projectile.fireOrigin.forward;
