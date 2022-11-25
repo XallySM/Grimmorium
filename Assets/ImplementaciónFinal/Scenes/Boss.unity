@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.028838575, g: 0.022006124, b: 0.013548184, a: 1}
+  m_IndirectSpecularColor: {r: 0.028838556, g: 0.022006119, b: 0.013548178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2852,6 +2852,8 @@ MonoBehaviour:
   playerManager: {fileID: 0}
   RecoverS: {fileID: 0}
   TakeDamageS: {fileID: 0}
+  RealDeathS: {fileID: 0}
+  GameOverS: {fileID: 0}
 --- !u!136 &454042815
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8236,18 +8238,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b54169dbb27b94587bba4a0b98b66bc0, type: 3}
   m_PrefabInstance: {fileID: 2028404105}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2028404110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028404106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a52c7189d74884caca6fdccdd33f9f19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2028404111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8390,6 +8380,8 @@ MonoBehaviour:
   playerManager: {fileID: 0}
   RecoverS: {fileID: 0}
   TakeDamageS: {fileID: 0}
+  RealDeathS: {fileID: 0}
+  GameOverS: {fileID: 0}
 --- !u!81 &2028404118
 AudioListener:
   m_ObjectHideFlags: 0
@@ -8428,6 +8420,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &2028404121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028404106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5ffbcbabd6e4e5ea08a54e48d604d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2034830037
 GameObject:
   m_ObjectHideFlags: 0
