@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.028838556, g: 0.022006119, b: 0.013548178, a: 1}
+  m_IndirectSpecularColor: {r: 0.028838575, g: 0.022006124, b: 0.013548184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2561,6 +2561,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &248846097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248846099}
+  - component: {fileID: 248846098}
+  m_Layer: 0
+  m_Name: WinCondition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &248846098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248846097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a50f0fbf2848f4faed72c9a3af3306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &248846099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248846097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.3242354, y: 2.174262, z: -1.1804972}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &306644192
 GameObject:
   m_ObjectHideFlags: 0
@@ -6224,7 +6268,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: da271e3df596dad42b48524a03142bf9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -9705,7 +9749,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104886811}
   m_LocalRotation: {x: 0.3838094, y: -0, z: -0, w: 0.92341244}
-  m_LocalPosition: {x: 0, y: 18.81, z: -18.73}
+  m_LocalPosition: {x: 0, y: 18.81, z: -18.49}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10835,9 +10879,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38afae367aa94c04be914f15b29d4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthLevel: 7
-  maxHealth: 7
-  currentHealth: 7
+  healthLevel: 1
+  maxHealth: 1
+  currentHealth: 1
   HitS: {fileID: 0}
   CryS: {fileID: 0}
   PrefabDeath: {fileID: 4353293079692655623, guid: 08103b1c8355e4f8a89df4b3ff6fc8ed, type: 3}
