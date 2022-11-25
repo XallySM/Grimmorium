@@ -9397,7 +9397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.5660378, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10879,9 +10879,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38afae367aa94c04be914f15b29d4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthLevel: 1
-  maxHealth: 1
-  currentHealth: 1
+  healthLevel: 7
+  maxHealth: 7
+  currentHealth: 7
   HitS: {fileID: 0}
   CryS: {fileID: 0}
   PrefabDeath: {fileID: 4353293079692655623, guid: 08103b1c8355e4f8a89df4b3ff6fc8ed, type: 3}
