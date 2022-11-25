@@ -38,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Implementacio\u0301nFinal/Scenes/Controls.unity"
     guid: 94023e420dc37425c83f63b4194efa6f
+  - enabled: 1
+    path: "Assets/Implementacio\u0301nFinal/Scenes/Intro.unity"
+    guid: 6acc100a2768b4c8fa3db93336b45025
+  - enabled: 1
+    path: "Assets/Implementacio\u0301nFinal/Scenes/End.unity"
+    guid: 62fa32241e12242bc9910b86df388c57
   m_configObjects: {}
