@@ -32,6 +32,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 7d2dff9cd5a1ed140929502f1908b599, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2DLOD_6617fce29eef4f4698be9dbce6d7b24a_Texture_1:
+        m_Texture: {fileID: 2800000, guid: fb50f7bd49b9b5942b3ab8b50dbbb0af, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Triplanar_e490d0774a0946059abd1d5e5c375fa2_Texture_1:
         m_Texture: {fileID: 2800000, guid: d8ed766244210ee459debf4a072cb782, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -53,7 +57,9 @@ Material:
     - WinkP: 1
     - _Blend_Opacity: 0
     - _Contrast: 0.56
+    - _Dissolve: 1
     - _Has_Map: 0
+    - _ImtensityD: 0
     - _Is_DirectX: 0
     - _Normal_Contrast: 1
     - _QueueControl: 0
