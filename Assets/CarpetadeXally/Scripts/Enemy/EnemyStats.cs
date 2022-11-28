@@ -59,6 +59,11 @@ public class EnemyStats : MonoBehaviour
 
         HitS.Play();
 
+        if (es_Ojo)
+        {
+            dissolveAnim.SetTrigger("Hurt");
+        }
+
         if (currentHealth <= 0)
         {
             
