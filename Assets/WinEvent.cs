@@ -6,29 +6,33 @@ using UnityEngine.SceneManagement;
 
 public class WinEvent : MonoBehaviour
 {
-    public GameObject winPanel;
-    EspadaEscudo espadaEscudo;
-    PlayerLocomotion playerLocomotion;
-    bool noPressed;
+    //public GameObject winPanel;
+    //EspadaEscudo espadaEscudo;
+    //PlayerLocomotion playerLocomotion;
+    //bool noPressed;
     public int nextScene;
+    //public GameObject lockGoalCollider;
 
     public AudioSource DoorS;
 
-    private void Awake()
+    /*private void Awake()
     {
         espadaEscudo = FindObjectOfType<EspadaEscudo>();
         playerLocomotion = FindObjectOfType<PlayerLocomotion>();
+        lockGoalCollider.SetActive(false);
 
 
     }
+    */
 
     private void OnTriggerEnter(Collider other)
     {
 
         DoorS.Play();
-
-        if (noPressed == false)
+        NextLevel();
+        /*if (noPressed == false)
         {
+
             winPanel.SetActive(true);
             espadaEscudo.isFreeze = true;
             playerLocomotion.cantJump = true;
@@ -37,22 +41,25 @@ public class WinEvent : MonoBehaviour
         {
             return;
         }
+        */
 
     }
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if (noPressed == false)
         {
             winPanel.SetActive(true);
             espadaEscudo.isFreeze = true;
             playerLocomotion.cantJump = true;
+            lockGoalCollider.SetActive(true);
         } else
         {
             return;
         }
 
     }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -61,6 +68,7 @@ public class WinEvent : MonoBehaviour
         espadaEscudo.isFreeze = false;
         noPressed = false;
     }
+    */
 
     public void NextLevel()
     {
@@ -68,10 +76,11 @@ public class WinEvent : MonoBehaviour
     }
 
 
-    public void NoButton()
+    /*public void NoButton()
     {
         winPanel.SetActive(false);
         noPressed = true;
     }
+    */
 
 }
